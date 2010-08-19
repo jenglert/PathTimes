@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout android:id="@+id/TableLayout02" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <TableRow>
+        <TextView android:id="@+id/resultsHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="hi"></TextView>
+    </TableRow>
+    <TableRow>
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:dividerHeight="0px"></ListView>
+    </TableRow>
+    <TableRow> 
+        <Button android:id="@+id/moreInfo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="More Info"
+                android:onClick="selectMoreInfo"></Button>
+    </TableRow>
+    
+</TableLayout>

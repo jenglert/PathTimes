@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout android:id="@+id/TableLayout01" android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<TableRow android:gravity="center_horizontal" android:layout_width="fill_parent">
+	<TextView android:text="From" 
+	    android:id="@+id/directionLabel" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:textColor="#00ff00"
+	    android:textSize="30px"
+	    android:paddingLeft="30px"
+	    ></TextView>
+</TableRow>
+
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+	<Button android:width="120dip" android:text="Hoboken" android:id="@+id/hobokenButton" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="selectHoboken" android:layout_marginRight="10px"></Button>
+	<Button android:width="120dip" android:text="Pavonia" android:id="@+id/pavoniaButton" 
+	    android:layout_width="fill_parent"  android:layout_marginLeft="10px"
+	    android:layout_height="wrap_content" 
+	    android:onClick="selectPavonia"></Button>
+</TableRow>
+
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+	<Button android:width="120dip" android:text="Christopher" 
+	    android:id="@+id/christopherButton" android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" android:layout_marginRight="10px"
+	    android:onClick="selectChristopher"></Button>
+	<Button android:width="120dip" android:text="9th" android:layout_marginLeft="10px"
+	    android:id="@+id/ninethButton" android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content" 
+	    android:onClick="select9th"></Button>
+</TableRow>
+
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+	<Button android:width="120dip" android:text="14th" android:id="@+id/fourteenthButton" 
+	    android:layout_width="fill_parent" android:layout_marginRight="10px"
+	    android:layout_height="wrap_content" 
+	    android:onClick="select14th"></Button>
+	<Button android:width="120dip" android:text="23rd" android:id="@+id/twentythirdButton" 
+	    android:layout_width="fill_parent" android:layout_marginLeft="10px"
+	    android:layout_height="wrap_content"
+	    android:onClick="select23rd"></Button>
+</TableRow>    
+
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+	<Button android:width="120dip" android:text="33rd" android:id="@+id/thirtyThirdButton" 
+	    android:layout_width="fill_parent" android:layout_marginRight="10px"
+	    android:layout_height="wrap_content"
+	    android:onClick="select33rd"></Button>
+	<Button android:width="120dip" android:text="Grove St" android:id="@+id/groveStButton" 
+	    android:layout_width="fill_parent" android:layout_marginLeft="10px"
+	    android:layout_height="wrap_content" 
+	    android:onClick="selectGroveSt"></Button>
+</TableRow>
+
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+	<Button android:width="120dip" android:text="Journal Sq" android:id="@+id/journalSquareButton" 
+	    android:layout_width="fill_parent" android:layout_marginRight="10px"
+	    android:layout_height="wrap_content"
+	    android:onClick="selectJournalSq"></Button>
+	<Button android:width="120dip" android:text="WTC" android:id="@+id/wtcButton" 
+	    android:layout_width="fill_parent" android:layout_marginLeft="10px"
+	    android:layout_height="wrap_content"
+	    android:onClick="selectWTC"></Button>
+</TableRow>
+
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+	<Button android:width="120dip" android:text="Newark" android:id="@+id/newarkButton" 
+	    android:layout_width="fill_parent" android:layout_marginRight="10px"
+	    android:layout_height="wrap_content"
+	    android:onClick="selectNewark"></Button>
+	<Button android:width="120dip" android:text="Exchange Pl." android:id="@+id/exchangeButton" 
+	    android:layout_width="fill_parent" android:layout_marginLeft="10px"
+	    android:layout_height="wrap_content"
+	    android:onClick="selectExchange"></Button>
+</TableRow>
+
+
+</TableLayout>
