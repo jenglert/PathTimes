@@ -1,5 +1,6 @@
 package jre.pathtimes;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -21,7 +22,12 @@ public class ScheduleUtil {
 		List<Calendar> arrivalTimes = new ArrayList<Calendar>();
 		
 		for (TrainLine train: trains) {
-			arrivalTimes.addAll(train.findNextAppropriateArrivalTimes(startStation, travelStart, desiredNumberOfResults));
+			List<Calendar> appropriateArrivalTimes = train.findNextAppropriateArrivalTimes(startStation, travelStart, desiredNumberOfResults);
+			System.out.println(train.name());
+			for (Calendar time : appropriateArrivalTimes) {
+				System.out.println(new SimpleDateFormat("HH mm a").format(time.getTime()));
+			}
+			arrivalTimes.addAll(appropriateArrivalTimes);
 		}
 		
 		// We don't have enough times yet, try for the next day
@@ -79,15 +85,16 @@ public class ScheduleUtil {
 		
 		// A Calendar interprets an hour of 12 to be the next day.  We correct this by making 00 of this day.
 		int hour = Integer.parseInt(dateStr.substring(0, dateStr.indexOf(":")));
-		int amPm = dateStr.substring(dateStr.length() - 2).equals("AM") ? Calendar.AM: Calendar.PM;
-		if (hour == 12 && amPm == Calendar.AM) {
+		int amPm = "AM".equals(dateStr.substring(dateStr.length() - 2)) ? Calendar.AM: Calendar.PM;
+		if (amPm == Calendar.PM && hour != 12) {
+			hour = hour + 12;
+		}
+		else if (amPm == Calendar.AM && hour == 12) {
 			hour = 0;
 		}
 		
-		date.set(Calendar.HOUR, hour);
+		date.set(Calendar.HOUR_OF_DAY, hour);
 		date.set(Calendar.MINUTE, Integer.parseInt(dateStr.substring(dateStr.indexOf(":") + 1, dateStr.indexOf(":") + 3)));
-		
-		date.set(Calendar.AM_PM, amPm);
 		
 		// Be sure to initialize the conversion to be at 0 seconds.
 		date.set(Calendar.SECOND, 0);

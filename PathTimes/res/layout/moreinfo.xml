@@ -1,4 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout android:id="@+id/TableLayout03" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+<TableLayout android:id="@+id/TableLayoutMoreInfo" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:screenOrientation="portrait"
+    android:orientation="vertical">
     
+
+<TableRow>
+    <TextView android:id="@+id/moreInfoTitle" 
+        android:layout_width="wrap_content" 
+        android:textSize="30px"
+        android:layout_height="wrap_content"></TextView>
+</TableRow>
+
+<TableRow>
+    <TextView android:id="@+id/travelTime" 
+        android:layout_width="wrap_content"
+        android:textSize="20px" 
+        android:layout_height="wrap_content"></TextView>
+</TableRow>
+
+<TableRow>
+
+    <TextView android:id="@+id/address" 
+        android:layout_width="wrap_content"
+        android:textSize="20px"
+        android:paddingTop="15px" 
+        android:layout_height="wrap_content"></TextView>
+</TableRow>
+
+
 </TableLayout>

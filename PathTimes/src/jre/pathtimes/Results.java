@@ -3,6 +3,7 @@ package jre.pathtimes;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import android.app.ListActivity;
@@ -43,7 +44,8 @@ public class Results extends ListActivity {
 		endingStation = Station.findById(intent.getExtras().getInt("endingStationId"));
 		
 		List<String> arrivalTimeStrings = new ArrayList<String>();
-		((TextView) findViewById(R.id.resultsHeader)).setText(startingStation.getName() + " to " + endingStation.getName());
+		TextView textView = (TextView) findViewById(R.id.resultsHeader);
+		textView.setText(startingStation.getName() + " to " + endingStation.getName());
 		
 		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(startingStation, endingStation, Calendar.getInstance(), 6);
 		
@@ -56,7 +58,11 @@ public class Results extends ListActivity {
 			SimpleDateFormat format = new SimpleDateFormat("hh:mm a");
 			
 			for (Calendar time : nextArrivalTimes) {
-				arrivalTimeStrings.add(format.format(time.getTime()));
+				long difference = time.getTime().getTime() - new Date().getTime();
+				
+				int minutes = (int) (difference / 60000);  // Convert to minutes.
+				
+				arrivalTimeStrings.add(format.format(time.getTime()) + "  (in " + minutes + " min)");
 			}
 		}
 		

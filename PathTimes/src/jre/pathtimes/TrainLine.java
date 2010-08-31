@@ -1,5 +1,6 @@
 package jre.pathtimes;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -490,6 +491,7 @@ public enum TrainLine {
 			
 			if (ScheduleUtil.compare(travelTime, currentTime) >= 0) {
 				
+				System.out.println(startTimeStr + " -> " + new SimpleDateFormat("HH mm a").format(travelTime.getTime()));
 				arrivalTimes.add(travelTime);
 					
 					if (arrivalTimes.size() >= desiredNumberOfResults) {

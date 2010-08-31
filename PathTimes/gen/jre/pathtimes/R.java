@@ -19,8 +19,9 @@ public final class R {
     }
     public static final class id {
         public static final int TableLayout01=0x7f060000;
-        public static final int TableLayout02=0x7f060010;
-        public static final int TableLayout03=0x7f06000e;
+        public static final int TableLayout02=0x7f060013;
+        public static final int TableLayoutMoreInfo=0x7f06000e;
+        public static final int address=0x7f060011;
         public static final int christopherButton=0x7f060004;
         public static final int directionLabel=0x7f060001;
         public static final int exchangeButton=0x7f06000d;
@@ -28,13 +29,15 @@ public final class R {
         public static final int groveStButton=0x7f060009;
         public static final int hobokenButton=0x7f060002;
         public static final int journalSquareButton=0x7f06000a;
-        public static final int listResultItemTextView=0x7f06000f;
-        public static final int moreInfo=0x7f060012;
+        public static final int listResultItemTextView=0x7f060012;
+        public static final int moreInfo=0x7f060015;
+        public static final int moreInfoTitle=0x7f06000f;
         public static final int newarkButton=0x7f06000c;
         public static final int ninethButton=0x7f060005;
         public static final int pavoniaButton=0x7f060003;
-        public static final int resultsHeader=0x7f060011;
+        public static final int resultsHeader=0x7f060014;
         public static final int thirtyThirdButton=0x7f060008;
+        public static final int travelTime=0x7f060010;
         public static final int twentythirdButton=0x7f060007;
         public static final int wtcButton=0x7f06000b;
     }
