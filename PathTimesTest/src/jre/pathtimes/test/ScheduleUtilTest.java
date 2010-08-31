@@ -34,6 +34,17 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		
 		assertClose(cal3, ScheduleUtil.convertDateStringToCalendar("12:04 AM"));
 		assertEquals(Calendar.getInstance().get(Calendar.DAY_OF_WEEK), ScheduleUtil.convertDateStringToCalendar("12:04 AM").get(Calendar.DAY_OF_WEEK));
+		
+		Calendar cal4 = Calendar.getInstance();
+		cal4.set(Calendar.HOUR_OF_DAY, 0);
+		cal4.set(Calendar.MINUTE, 13);
+		assertClose(cal4, ScheduleUtil.convertDateStringToCalendar("12:13 AM"));
+		
+		Calendar cal5 = Calendar.getInstance();
+		cal5.set(Calendar.HOUR_OF_DAY, 12);
+		cal5.set(Calendar.MINUTE, 26);
+		assertClose(cal5, ScheduleUtil.convertDateStringToCalendar("12:26 PM"));
+		
 	}
 	
 	/**
@@ -117,7 +128,7 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 				nextArrivalTimes.get(2));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("11:56 PM"),
 				nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:26 PM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:26 AM"),
 				nextArrivalTimes.get(4));
 	}
 	
@@ -150,7 +161,7 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 				ScheduleUtil.convertDateStringToCalendar("11:42 PM"),
 				nextArrivalTimes.get(3)));
 		assertEquals(0, ScheduleUtil.compare(
-				ScheduleUtil.convertDateStringToCalendar("12:12 PM"),
+				ScheduleUtil.convertDateStringToCalendar("12:12 AM"),
 				nextArrivalTimes.get(4)));
 	}
 	
@@ -186,6 +197,36 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		
 		List<Calendar> results = ScheduleUtil.getNextArrivalTimes(Station.Hoboken, Station.Newark, cal, 5);
 		
-		assertEquals(0, results.size());
+		assertTrue(results == null);
 	}
+	
+	public void testGetNextArrivalTime_6() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 11);
+		cal.set(Calendar.MINUTE, 55);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+
+		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
+				Station.Hoboken, Station.ThirtyThird, cal, 5);
+		
+		List<TrainLine> trainLine = ScheduleUtil.findAppropriateTrainLines(
+				Station.Hoboken, Station.ThirtyThird, cal);
+		
+		assertEquals(2, trainLine.size());
+
+		assertNotNull(nextArrivalTimes);
+		assertEquals(5, nextArrivalTimes.size());
+		
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:02 PM"),
+				nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:12 PM"),
+				nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:22 PM"),
+				nextArrivalTimes.get(2));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:32 PM"),
+				nextArrivalTimes.get(3));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:42 PM"),
+				nextArrivalTimes.get(4));
+	}
+	
 }
