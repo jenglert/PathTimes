@@ -97,10 +97,7 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		
 		assertNotNull(nextArrivalTimes);
 		
-		assertEquals(0, ScheduleUtil.compare(
-				ScheduleUtil.convertDateStringToCalendar("04:12 PM"),
-				nextArrivalTimes.get(0)));
-			
+		assertClose(ScheduleUtil.convertDateStringToCalendar("04:12 PM"), nextArrivalTimes.get(0));
 	}
 	
 	/**
@@ -128,7 +125,7 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 				nextArrivalTimes.get(2));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("11:56 PM"),
 				nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:26 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:11 AM"),
 				nextArrivalTimes.get(4));
 	}
 	
@@ -148,21 +145,11 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		assertNotNull(nextArrivalTimes);
 		assertEquals(5, nextArrivalTimes.size());
 		
-		assertEquals(0, ScheduleUtil.compare(
-				ScheduleUtil.convertDateStringToCalendar("10:57 PM"),
-				nextArrivalTimes.get(0)));
-		assertEquals(0, ScheduleUtil.compare(
-				ScheduleUtil.convertDateStringToCalendar("11:12 PM"),
-				nextArrivalTimes.get(1)));
-		assertEquals(0, ScheduleUtil.compare(
-				ScheduleUtil.convertDateStringToCalendar("11:27 PM"),
-				nextArrivalTimes.get(2)));
-		assertEquals(0, ScheduleUtil.compare(
-				ScheduleUtil.convertDateStringToCalendar("11:42 PM"),
-				nextArrivalTimes.get(3)));
-		assertEquals(0, ScheduleUtil.compare(
-				ScheduleUtil.convertDateStringToCalendar("12:12 AM"),
-				nextArrivalTimes.get(4)));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("10:57 PM"), nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:12 PM"), nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:27 PM"), nextArrivalTimes.get(2));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:42 PM"), nextArrivalTimes.get(3));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:12 AM"), nextArrivalTimes.get(4));
 	}
 	
 	public void testGetNextArrivalTime_4() {
@@ -226,6 +213,30 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		assertClose(ScheduleUtil.convertDateStringToCalendar("12:32 PM"),
 				nextArrivalTimes.get(3));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("12:42 PM"),
+				nextArrivalTimes.get(4));
+	}
+	
+	public void testGetNextArrivalTime_7() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 23);
+		cal.set(Calendar.MINUTE, 30);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+
+		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
+				Station.Nineth, Station.TwentyThird, cal, 5);
+
+		assertNotNull(nextArrivalTimes);
+		assertEquals(5, nextArrivalTimes.size());
+		
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:36 PM"),
+				nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:06 AM"),
+				nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:21 AM"),
+				nextArrivalTimes.get(2));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:36 AM"),
+				nextArrivalTimes.get(3));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("01:06 AM"),
 				nextArrivalTimes.get(4));
 	}
 	

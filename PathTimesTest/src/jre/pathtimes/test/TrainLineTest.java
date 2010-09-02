@@ -85,4 +85,23 @@ public class TrainLineTest extends PathTimesUnitTest {
 		assertClose(ScheduleUtil.convertDateStringToCalendar("11:56 PM"),
 				nextArrivalTimes.get(1));
 	}
+	
+	public void testFindNextAppropriateArrivalTimes_4() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 23);
+		cal.set(Calendar.MINUTE, 30);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+
+		List<Calendar> nextArrivalTimes = TrainLine.JSQ_TTRD_VIA_HOB_WEEKDAY.findNextAppropriateArrivalTimes(
+				Station.Nineth, cal, 5);
+
+		assertNotNull(nextArrivalTimes);
+		
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:36 PM"),
+				nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:06 AM"),
+				nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:21 AM"),
+				nextArrivalTimes.get(2));
+	}
 }

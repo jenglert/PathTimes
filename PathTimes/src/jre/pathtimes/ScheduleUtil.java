@@ -1,6 +1,5 @@
 package jre.pathtimes;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -23,10 +22,6 @@ public class ScheduleUtil {
 		
 		for (TrainLine train: trains) {
 			List<Calendar> appropriateArrivalTimes = train.findNextAppropriateArrivalTimes(startStation, travelStart, desiredNumberOfResults);
-			System.out.println(train.name());
-			for (Calendar time : appropriateArrivalTimes) {
-				System.out.println(new SimpleDateFormat("HH mm a").format(time.getTime()));
-			}
 			arrivalTimes.addAll(appropriateArrivalTimes);
 		}
 		
@@ -60,6 +55,11 @@ public class ScheduleUtil {
 	 * @return int the comparison negative if the dateStr occurs before travelTime, 0 if they are equal, positive if dateStr occurs after travelTime
 	 */
 	public static int compare(Calendar dateCal, Calendar travelTime) {
+		
+		// Evaluate the days
+		if (dateCal.get(Calendar.DAY_OF_YEAR) != travelTime.get(Calendar.DAY_OF_YEAR)) {
+			return dateCal.get(Calendar.DAY_OF_YEAR) - travelTime.get(Calendar.DAY_OF_YEAR); 
+		}
 		
 		// Evaluate the hours
 		if (dateCal.get(Calendar.HOUR_OF_DAY) != travelTime.get(Calendar.HOUR_OF_DAY)) {
