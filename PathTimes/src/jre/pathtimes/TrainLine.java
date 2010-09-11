@@ -429,7 +429,7 @@ public enum TrainLine {
 					"07:32 PM", "07:47 PM", "08:02 PM", "08:17 PM", "08:32 PM",
 					"08:47 PM", "09:02 PM", "09:17 PM", "09:32 PM", "09:47 PM",
 					"10:02 PM", "10:17 PM", "10:32 PM", "10:47 PM", "11:02 PM",
-					"11:17 PM", "11:32 PM", "12:04 AM" }, new String[] { "1.0",
+					"11:17 PM", "11:32 PM", "12:04 AM" }, new String[] { "1",
 					"1", "1", "2", "11", "3", "3", "4" }, ScheduleDay.Saturday), 
 					
 	TTRD_JSQ_VIA_HOB_SUN_HOL(

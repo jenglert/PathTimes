@@ -240,4 +240,28 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 				nextArrivalTimes.get(4));
 	}
 	
+	public void testGetNextArrivalTime_8() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 2);
+		cal.set(Calendar.MINUTE, 55);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
+
+		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
+				Station.Christopher, Station.Hoboken, cal, 5);
+
+		assertNotNull(nextArrivalTimes);
+		assertEquals(5, nextArrivalTimes.size());
+		
+		assertClose(ScheduleUtil.convertDateStringToCalendar("03:17 AM"),
+				nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("03:47 AM"),
+				nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("04:17 AM"),
+				nextArrivalTimes.get(2));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("04:47 AM"),
+				nextArrivalTimes.get(3));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("05:17 AM"),
+				nextArrivalTimes.get(4));
+	}
+	
 }
