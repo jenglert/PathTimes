@@ -44,7 +44,7 @@ public class ScheduleUtil {
 		
 		Collections.sort(arrivalTimes);
 		
-		return arrivalTimes.subList(0, desiredNumberOfResults);
+		return arrivalTimes.subList(0, Math.min(desiredNumberOfResults, arrivalTimes.size()));
 	}
 	
 	/**
@@ -130,10 +130,6 @@ public class ScheduleUtil {
 				if (startStationFound && station.equals(endStation)) {
 					trainLines.add(trainLine);				}
 			}
-		}
-		
-		if (trainLines.size() <= 0) {
-			return null;
 		}
 		
 		return trainLines;

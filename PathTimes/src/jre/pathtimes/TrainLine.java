@@ -369,10 +369,7 @@ public enum TrainLine {
 					
 	TTRD_HOB_WEEKDAY(
 			new Station[] { Station.ThirtyThird, Station.TwentyThird, Station.Fourteenth, Station.Nineth,
-					Station.Christopher, Station.Hoboken }, new String[] { "12:12 AM",
-					"12:42 AM", "01:12 AM", "01:42 AM", "02:12 AM", "02:42 AM",
-					"03:12 AM", "03:42 AM", "04:12 AM", "04:42 AM", "05:12 AM",
-					"05:42 AM", "06:12 AM", "06:30 AM", "06:40 AM", "06:50 AM",
+					Station.Christopher, Station.Hoboken }, new String[] {  "06:30 AM", "06:40 AM", "06:50 AM",
 					"07:00 AM", "07:10 AM", "07:16 AM", "07:22 AM", "07:28 AM",
 					"07:36 AM", "07:44 AM", "07:52 AM", "07:58 AM", "08:04 AM",
 					"08:10 AM", "08:16 AM", "08:22 AM", "08:28 AM", "08:34 AM",

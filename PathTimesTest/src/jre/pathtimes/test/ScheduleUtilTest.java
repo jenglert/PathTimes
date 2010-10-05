@@ -1,5 +1,6 @@
 package jre.pathtimes.test;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -9,6 +10,98 @@ import jre.pathtimes.Station;
 import jre.pathtimes.TrainLine;
 
 public class ScheduleUtilTest extends PathTimesUnitTest {
+	
+	/**
+	 * Tests all the schedules for appropriateness
+	 */
+	public void testAllSchedules() {
+		for (int i = 0; i < Station.values().length; i++) {
+			for (int j = 0; j < Station.values().length; j++) {
+				for (int dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
+				
+					if (dayOfWeek == Calendar.WEDNESDAY || dayOfWeek == Calendar.TUESDAY || dayOfWeek == Calendar.THURSDAY)
+						continue;
+				
+					Calendar calendar = Calendar.getInstance();
+					calendar.set(Calendar.HOUR_OF_DAY, 0);
+					calendar.set(Calendar.MINUTE, 0);
+					calendar.set(Calendar.DAY_OF_WEEK, dayOfWeek);
+					
+					for (int minuteIter = 0; minuteIter < 48; minuteIter++) {
+						calendar.add(Calendar.MINUTE,	minuteIter * 30);
+						
+						try {
+							System.out.println("Processing "
+									+ Station.values()[i].getName()
+									+ " to "
+									+ Station.values()[j].getName()
+									+ " at "
+									+ new SimpleDateFormat("E hh mm a")
+											.format(calendar.getTime()));
+							
+							List<Calendar> results = ScheduleUtil.getNextArrivalTimes(Station.values()[i], Station.values()[j], calendar, 6);
+							
+							String makesSense = resultsMakeSense(results);
+							
+							if (makesSense == null) {
+								continue;
+							}
+							
+							throw new RuntimeException(
+									"Failure while processing "
+											+ Station.values()[i].getName()
+											+ " to "
+											+ Station.values()[j].getName()
+											+ " at " + new SimpleDateFormat("E hh mm a").format(calendar.getTime())
+											+ " becuase:  " + makesSense);
+							
+							
+						}
+						catch (Exception e) {
+							throw new RuntimeException(
+									"Failure while processing "
+											+ Station.values()[i].getName()
+											+ " to "
+											+ Station.values()[j].getName()
+											+ " at "
+											+ new SimpleDateFormat("E hh mm a").format(calendar
+													.getTime()), e);
+						}	
+					}			
+				}
+			}
+		}
+	}
+	
+	private String resultsMakeSense(List<Calendar> results) {
+		
+		// This is probably OK because there is no train between these two stations.
+		if (results == null) {
+			return null;
+		}
+		
+		Calendar previousResult = null;
+		for (Calendar result : results) {
+			if (previousResult == null) {
+				continue;
+			}
+			
+			if (result.getTimeInMillis() <= previousResult.getTimeInMillis()) {
+				return "There was a path time that was equal to or less than the one before it.";
+			}
+			
+			if (result.getTimeInMillis() - previousResult.getTimeInMillis() <  3 * 60 * 1000) { // 3 minutes
+				return "There was a path time where the previous time was within 3 minutes of the one before it.";
+			}
+			
+			if (result.getTimeInMillis() - previousResult.getTimeInMillis() >  31 * 60 * 1000) { // 3 minutes
+				return "There was a path time where the previous time was greater than 31 minutes after the one before it.";
+			}
+		}
+		
+		
+		return null;
+	}
 	
 	/**
 	 * Tests converting a date string into a calendar instance.
@@ -264,4 +357,61 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 				nextArrivalTimes.get(4));
 	}
 	
+	public void testGetNextArrivalTime_9() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 23);
+		cal.set(Calendar.MINUTE, 30);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.THURSDAY);
+
+		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
+				Station.ThirtyThird, Station.Hoboken, cal, 5);
+
+		assertNotNull(nextArrivalTimes);
+		assertEquals(5, nextArrivalTimes.size());
+		
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:42 PM"),
+				nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:12 AM"),
+				nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:27 AM"),
+				nextArrivalTimes.get(2));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:42 AM"),
+				nextArrivalTimes.get(3));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("01:12 AM"),
+				nextArrivalTimes.get(4));
+	}
+	
+	public void testGetNextArrivalTime_10() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 0);
+		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
+
+		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
+				Station.ThirtyThird, Station.ExchangePlace, cal, 5);
+
+		assertNull(nextArrivalTimes);
+	}
+	
+	public void testGetNextArrivalTime_11() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 22);
+		cal.set(Calendar.MINUTE, 30);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+
+		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
+				Station.ExchangePlace, Station.Pavonia, cal, 5);
+
+		assertNotNull(nextArrivalTimes);
+		assertEquals(4, nextArrivalTimes.size());
+		
+		assertClose(ScheduleUtil.convertDateStringToCalendar("10:30 PM"),
+				nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("10:45 PM"),
+				nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:00 PM"),
+				nextArrivalTimes.get(2));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:15 PM"),
+				nextArrivalTimes.get(3));
+	}
 }
