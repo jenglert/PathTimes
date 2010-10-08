@@ -35,8 +35,10 @@ public class MoreInfo extends Activity {
 		
 		title.setText(startingStation.getName() + " to " + endingStation.getName());
 		
-		travelTime.setText("Travel is " +trainLine.get(0).getTimeBetweenStations(startingStation, endingStation) 
-				+ " minutes.");
+		if (trainLine.size() > 0) {
+			travelTime.setText("Travel is " +trainLine.get(0).getTimeBetweenStations(startingStation, endingStation) 
+					+ " minutes.");
+		}
 		
 		address.setText("Location: " + startingStation.getAddress());
 		

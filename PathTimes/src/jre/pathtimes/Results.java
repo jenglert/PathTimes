@@ -49,7 +49,7 @@ public class Results extends ListActivity {
 		
 		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(startingStation, endingStation, Calendar.getInstance(), 6);
 		
-		if (nextArrivalTimes == null) {
+		if (nextArrivalTimes == null || nextArrivalTimes.size() == 0) {
 			arrivalTimeStrings.add("Unable to find train line.");
 			arrivalTimeStrings.add("This app currently does not support transfers.");
 			arrivalTimeStrings.add("Choose a destination with a train line currently running.");
