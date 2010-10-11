@@ -20,8 +20,8 @@
     </TableRow>
     <TableRow> 
         <Button android:id="@+id/moreInfo" android:layout_width="fill_parent" 
-            android:layout_height="wrap_content" android:text="More Info"
-                android:onClick="selectMoreInfo" android:width="200px"
+            android:layout_height="wrap_content" android:text="Compass and More Info"
+                android:onClick="selectMoreInfo" android:width="350px"
                 android:layout_marginTop="35px"
                 android:layout_gravity="center_horizontal"></Button>
     </TableRow>

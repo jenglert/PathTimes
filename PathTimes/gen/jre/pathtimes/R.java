@@ -15,27 +15,33 @@ public final class R {
         public static final int red=0x7f050000;
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
+        public static final int green_arrow=0x7f020000;
+        public static final int icon=0x7f020001;
+        public static final int not_available=0x7f020002;
+        public static final int red_arrow=0x7f020003;
+        public static final int yellow_arrow=0x7f020004;
     }
     public static final class id {
         public static final int TableLayout01=0x7f060000;
-        public static final int TableLayout02=0x7f060013;
+        public static final int TableLayout02=0x7f060015;
         public static final int TableLayoutMoreInfo=0x7f06000e;
         public static final int address=0x7f060011;
+        public static final int arrow=0x7f060013;
         public static final int christopherButton=0x7f060004;
         public static final int directionLabel=0x7f060001;
+        public static final int distanceFromStation=0x7f060012;
         public static final int exchangeButton=0x7f06000d;
         public static final int fourteenthButton=0x7f060006;
         public static final int groveStButton=0x7f060009;
         public static final int hobokenButton=0x7f060002;
         public static final int journalSquareButton=0x7f06000a;
-        public static final int listResultItemTextView=0x7f060012;
-        public static final int moreInfo=0x7f060015;
+        public static final int listResultItemTextView=0x7f060014;
+        public static final int moreInfo=0x7f060017;
         public static final int moreInfoTitle=0x7f06000f;
         public static final int newarkButton=0x7f06000c;
         public static final int ninethButton=0x7f060005;
         public static final int pavoniaButton=0x7f060003;
-        public static final int resultsHeader=0x7f060014;
+        public static final int resultsHeader=0x7f060016;
         public static final int thirtyThirdButton=0x7f060008;
         public static final int travelTime=0x7f060010;
         public static final int twentythirdButton=0x7f060007;

@@ -123,10 +123,10 @@ public class PathTimes extends Activity {
     
 	public void selectGroveSt(View view) {
 		if (startingStation == null) {
-			startingStation = Station.JournalSquare;
+			startingStation = Station.GroveSt;
 			selectDeparture(view);
 		} else {
-			endingStation = Station.JournalSquare;
+			endingStation = Station.GroveSt;
 			selectArrival(view);
 		}
 	}

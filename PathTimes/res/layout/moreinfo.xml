@@ -22,7 +22,6 @@
 </TableRow>
 
 <TableRow>
-
     <TextView android:id="@+id/address" 
         android:layout_width="wrap_content"
         android:textSize="20px"
@@ -30,5 +29,22 @@
         android:layout_height="wrap_content"></TextView>
 </TableRow>
 
+<TableRow>
+    <TextView android:id="@+id/distanceFromStation" 
+        android:layout_width="wrap_content"
+        android:textSize="40px"
+        android:paddingTop="15px"
+        android:layout_height="wrap_content"></TextView>
+</TableRow>
+
+<TableRow android:gravity="center">
+    <ImageView android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="300px"
+        android:minWidth="300px"
+        />
+</TableRow>
 
 </TableLayout>
