@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"></TextView>
 </TableRow>
 
-<TableRow android:gravity="center">
+<TableRow android:gravity="center" android:animationCache="true" android:layout_height="fill_parent">
     <ImageView android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
