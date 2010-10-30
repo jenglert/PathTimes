@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PathTimes extends Activity {
 	
@@ -28,7 +31,13 @@ public class PathTimes extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        
+        if (hasSmallScreen()) {
+        		setContentView(R.layout.main_small);
+        }
+        else {
+        		setContentView(R.layout.main);
+        }
     }
     
     public void selectChristopher(View view) {
@@ -163,6 +172,23 @@ public class PathTimes extends Activity {
 			selectArrival(view);
 		}
 	}
+	
+	public void selectHarrison(View view) {
+
+		if (startingStation == null) {
+			startingStation = Station.Harrison;
+			selectDeparture(view);
+		} else {
+			endingStation = Station.Harrison;
+			selectArrival(view);
+		}
+	}
+	
+	public void selectGeneralInfo(View view) {
+		Intent intent = new Intent(".GeneralInfo");
+		
+		startActivityForResult(intent, ACTIVITY_RESPONSE_CALLBACK);
+	}
 
     /**
      * Selects the departure city
@@ -196,5 +222,15 @@ public class PathTimes extends Activity {
 		((TextView) findViewById(R.id.directionLabel)).setTextColor(Color.GREEN);
 		((TextView) findViewById(R.id.directionLabel)).setPadding(30, 0, 0, 0);
 		
+	}
+	
+	/**
+	 * Determines whether the consumer has a relatively small screen.
+	 */
+	private boolean hasSmallScreen() {
+		 DisplayMetrics metrics = new DisplayMetrics();
+		 getWindowManager().getDefaultDisplay().getMetrics(metrics);
+		 
+		 return metrics.widthPixels <= 350 || metrics.heightPixels <= 480;
 	}
 }

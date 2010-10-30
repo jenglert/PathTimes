@@ -10,6 +10,7 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
@@ -36,7 +37,7 @@ public class Results extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
 		setContentView(R.layout.results);
 		
 		Intent intent = getIntent();
@@ -70,6 +71,16 @@ public class Results extends ListActivity {
 		
 	}
 	
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+	
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+	}
+
 	/**
 	 * Handle the more info button
 	 */
@@ -78,9 +89,6 @@ public class Results extends ListActivity {
         intent.putExtra("startingStationId", startingStation.getId());
         intent.putExtra("endingStationId", endingStation.getId());
 
-		startingStation = null;
-		endingStation = null;
-        
 		startActivityForResult(intent, ACTIVITY_RESPONSE_CALLBACK);
 	}
 }

@@ -18,6 +18,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -165,6 +166,10 @@ public class MoreInfo extends Activity {
 			Criteria crit = new Criteria();
 			crit.setAccuracy(Criteria.ACCURACY_FINE);
 			String provider = locationManager.getBestProvider(crit, true);
+			
+			if (provider == null || "".equals(provider)) {
+				return;
+			}
 			
 			locationHandler = new PositionUpdateHandler(startingStation);
 			locationManager.requestLocationUpdates(provider, 2000, 0, locationHandler);

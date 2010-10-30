@@ -4,27 +4,28 @@
     android:layout_height="fill_parent" 
     xmlns:android="http://schemas.android.com/apk/res/android" 
     android:screenOrientation="portrait"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
     
 
 <TableRow>
     <TextView android:id="@+id/moreInfoTitle" 
         android:layout_width="wrap_content" 
-        android:textSize="30px"
+        android:textSize="40px"
         android:layout_height="wrap_content"></TextView>
 </TableRow>
 
 <TableRow>
     <TextView android:id="@+id/travelTime" 
         android:layout_width="wrap_content"
-        android:textSize="20px" 
+        android:textSize="30px" 
         android:layout_height="wrap_content"></TextView>
 </TableRow>
 
 <TableRow>
     <TextView android:id="@+id/address" 
         android:layout_width="wrap_content"
-        android:textSize="20px"
+        android:textSize="30px"
         android:paddingTop="15px" 
         android:layout_height="wrap_content"></TextView>
 </TableRow>
@@ -32,12 +33,12 @@
 <TableRow>
     <TextView android:id="@+id/distanceFromStation" 
         android:layout_width="wrap_content"
-        android:textSize="40px"
+        android:textSize="30px"
         android:paddingTop="15px"
         android:layout_height="wrap_content"></TextView>
 </TableRow>
 
-<TableRow android:gravity="center" android:animationCache="true" android:layout_height="fill_parent">
+<TableRow android:gravity="center" android:animationCache="true" android:minHeight="425px">
     <ImageView android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

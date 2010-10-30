@@ -2,7 +2,7 @@
 
 <TableLayout android:id="@+id/TableLayout01" android:layout_width="fill_parent" 
     android:layout_height="fill_parent" android:screenOrientation="portrait"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/background" >
+    xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/background">
 
 <TableRow android:gravity="center_horizontal" android:layout_width="fill_parent">
 	<TextView android:text="From" 
@@ -10,92 +10,92 @@
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
 	    android:textColor="#00ff00"
-	    android:textSize="30px"
-	    android:paddingLeft="30px"
+	    android:textSize="25px"
+	    android:paddingLeft="25px"
 	    ></TextView>
 </TableRow>
 
-<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="5px">
 	<Button android:text="Hoboken" android:id="@+id/hobokenButton" 
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" android:textSize="30px"
+	    android:layout_height="wrap_content" android:textSize="25px"
 	    android:onClick="selectHoboken"></Button>
 	<Button android:text="Pavonia" android:id="@+id/pavoniaButton" 
 	    android:layout_width="fill_parent" 
-	    android:layout_height="wrap_content" android:textSize="30px" 
+	    android:layout_height="wrap_content" android:textSize="25px" 
 	    android:onClick="selectPavonia"></Button>
 </TableRow>
 
-<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
-	<Button android:text="Christopher" android:textSize="30px" 
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="5px">
+	<Button android:text="Christopher" android:textSize="25px" 
 	    android:id="@+id/christopherButton" android:layout_width="wrap_content" 
 	    android:layout_height="wrap_content"
 	    android:onClick="selectChristopher"></Button>
 	<Button android:text="9th" 
 	    android:id="@+id/ninethButton" android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" android:textSize="30px" 
+	    android:layout_height="wrap_content" android:textSize="25px" 
 	    android:onClick="select9th"></Button>
 </TableRow>
 
-<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="5px">
 	<Button android:text="14th" android:id="@+id/fourteenthButton" 
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" android:textSize="30px" 
+	    android:layout_height="wrap_content" android:textSize="25px" 
 	    android:onClick="select14th"></Button>
 	<Button android:text="23rd" android:id="@+id/twentythirdButton" 
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" android:textSize="30px"
+	    android:layout_height="wrap_content" android:textSize="25px"
 	    android:onClick="select23rd"></Button>
 </TableRow>    
 
-<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="5px">
 	<Button android:text="33rd" android:id="@+id/thirtyThirdButton" 
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	     android:textSize="30px"
+	     android:textSize="25px"
 	    android:onClick="select33rd"></Button>
 	<Button android:width="120dip" android:text="Grove St" android:id="@+id/groveStButton" 
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content" 
-	    android:textSize="30px" 
+	    android:textSize="25px" 
 	    android:onClick="selectGroveSt"></Button>
 </TableRow>
 
-<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="5px">
 	<Button android:text="Journal Sq" android:id="@+id/journalSquareButton" 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:textSize="30px"
+	    android:textSize="25px"
 	    android:onClick="selectJournalSq"></Button>
 	<Button android:text="WTC" android:id="@+id/wtcButton" 
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" android:textSize="30px"
+	    android:layout_height="wrap_content" android:textSize="25px"
 	    android:onClick="selectWTC"></Button>
 </TableRow>
 
-<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="5px">
 	<Button android:text="Newark" android:id="@+id/newarkButton" 
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
-	    android:textSize="30px"
+	    android:textSize="25px"
 	    android:onClick="selectNewark"></Button>
 	<Button android:text="Exchange Pl." android:id="@+id/exchangeButton" 
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content" 
-	    android:textSize="30px"
+	    android:textSize="25px"
 	    android:onClick="selectExchange"></Button>
 </TableRow>
 
-<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="15px">
+<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal" android:layout_marginBottom="5px">
     <Button android:text="Harrison" android:id="@+id/harrisonButton" 
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
-        android:textSize="30px"
+        android:textSize="25px"
         android:onClick="selectHarrison"></Button>
     <Button android:text="General Info" android:id="@+id/generalInfoButton" 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
-        android:textSize="30px"
+        android:textSize="25px"
         android:onClick="selectGeneralInfo"></Button>
 </TableRow>
 

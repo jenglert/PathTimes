@@ -11,49 +11,62 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int blue=0x7f050001;
-        public static final int red=0x7f050000;
+        public static final int blue=0x7f060001;
+        public static final int red=0x7f060000;
+        public static final int transparent=0x7f060002;
     }
     public static final class drawable {
-        public static final int green_arrow=0x7f020000;
-        public static final int icon=0x7f020001;
-        public static final int not_available=0x7f020002;
-        public static final int red_arrow=0x7f020003;
-        public static final int yellow_arrow=0x7f020004;
+        public static final int background=0x7f020000;
+        public static final int green_arrow=0x7f020001;
+        public static final int icon=0x7f020002;
+        public static final int not_available=0x7f020003;
+        public static final int path=0x7f020004;
+        public static final int pathmap03=0x7f020005;
+        public static final int red_arrow=0x7f020006;
+        public static final int yellow_arrow=0x7f020007;
     }
     public static final class id {
-        public static final int TableLayout01=0x7f060000;
-        public static final int TableLayout02=0x7f060015;
-        public static final int TableLayoutMoreInfo=0x7f06000e;
-        public static final int address=0x7f060011;
-        public static final int arrow=0x7f060013;
-        public static final int christopherButton=0x7f060004;
-        public static final int directionLabel=0x7f060001;
-        public static final int distanceFromStation=0x7f060012;
-        public static final int exchangeButton=0x7f06000d;
-        public static final int fourteenthButton=0x7f060006;
-        public static final int groveStButton=0x7f060009;
-        public static final int hobokenButton=0x7f060002;
-        public static final int journalSquareButton=0x7f06000a;
-        public static final int listResultItemTextView=0x7f060014;
-        public static final int moreInfo=0x7f060017;
-        public static final int moreInfoTitle=0x7f06000f;
-        public static final int newarkButton=0x7f06000c;
-        public static final int ninethButton=0x7f060005;
-        public static final int pavoniaButton=0x7f060003;
-        public static final int resultsHeader=0x7f060016;
-        public static final int thirtyThirdButton=0x7f060008;
-        public static final int travelTime=0x7f060010;
-        public static final int twentythirdButton=0x7f060007;
-        public static final int wtcButton=0x7f06000b;
+        public static final int LinearLayoutGeneralInfo=0x7f070000;
+        public static final int TableLayout01=0x7f070002;
+        public static final int TableLayout02=0x7f070019;
+        public static final int TableLayoutMoreInfo=0x7f070012;
+        public static final int address=0x7f070015;
+        public static final int arrow=0x7f070017;
+        public static final int christopherButton=0x7f070006;
+        public static final int directionLabel=0x7f070003;
+        public static final int distanceFromStation=0x7f070016;
+        public static final int exchangeButton=0x7f07000f;
+        public static final int fourteenthButton=0x7f070008;
+        public static final int generalInfoButton=0x7f070011;
+        public static final int generalInfoWebView=0x7f070001;
+        public static final int groveStButton=0x7f07000b;
+        public static final int harrisonButton=0x7f070010;
+        public static final int hobokenButton=0x7f070004;
+        public static final int journalSquareButton=0x7f07000c;
+        public static final int listResultItemTextView=0x7f070018;
+        public static final int moreInfo=0x7f07001b;
+        public static final int moreInfoTitle=0x7f070013;
+        public static final int newarkButton=0x7f07000e;
+        public static final int ninethButton=0x7f070007;
+        public static final int pavoniaButton=0x7f070005;
+        public static final int resultsHeader=0x7f07001a;
+        public static final int thirtyThirdButton=0x7f07000a;
+        public static final int travelTime=0x7f070014;
+        public static final int twentythirdButton=0x7f070009;
+        public static final int wtcButton=0x7f07000d;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int moreinfo=0x7f030001;
-        public static final int result_item=0x7f030002;
-        public static final int results=0x7f030003;
+        public static final int generalinfo=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int main_small=0x7f030002;
+        public static final int moreinfo=0x7f030003;
+        public static final int result_item=0x7f030004;
+        public static final int results=0x7f030005;
+    }
+    public static final class raw {
+        public static final int general_info=0x7f040000;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
+        public static final int app_name=0x7f050000;
     }
 }

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <TableLayout android:id="@+id/TableLayout02" 
-    android:layout_width="fill_parent" android:gravity="fill_horizontal"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent" android:orientation="vertical"
     android:screenOrientation="portrait"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background">
     
     <TableRow>
         <TextView android:id="@+id/resultsHeader" 
-            android:layout_gravity="center_horizontal" android:width="300px"
             android:layout_width="fill_parent" android:layout_height="wrap_content" 
             android:textSize="35px" android:textColor="@color/blue"></TextView>
     </TableRow>
     <TableRow>
         <ListView android:id="@android:id/list" android:layout_width="fill_parent" 
             android:layout_height="wrap_content" android:dividerHeight="0px" 
-            android:divider="#FFF" android:background="#000"
+            android:divider="#FFF"
             android:layout_gravity="center_horizontal"></ListView>
     </TableRow>
-    <TableRow> 
+    <TableRow android:layout_gravity="center_horizontal"> 
         <Button android:id="@+id/moreInfo" android:layout_width="fill_parent" 
             android:layout_height="wrap_content" android:text="Compass and More Info"
                 android:onClick="selectMoreInfo" android:width="350px"
-                android:layout_marginTop="35px"
-                android:layout_gravity="center_horizontal"></Button>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35px"></Button>
     </TableRow>
     
 </TableLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/LinearLayoutGeneralInfo" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:screenOrientation="portrait"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    
+    <WebView android:id="@+id/generalInfoWebView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5px">
+            
+    </WebView>
+
+</LinearLayout>
