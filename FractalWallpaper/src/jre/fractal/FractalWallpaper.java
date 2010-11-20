@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.content.SharedPreferences;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Handler;
@@ -44,11 +45,12 @@ public class FractalWallpaper extends WallpaperService {
 		return new FractalEngine();
 	}
 
-	public class FractalEngine extends Engine {
+	public class FractalEngine extends Engine
+		implements SharedPreferences.OnSharedPreferenceChangeListener {
 		private Paint paint = new Paint();
 		private boolean visible;
-		private float startY;
-		private float startX;
+		private Float startY = null;
+		private Float startX = null;
 		private long startTime;
 		
 		
@@ -104,11 +106,14 @@ public class FractalWallpaper extends WallpaperService {
             // store the center of the surface, so we can draw the cube in the right spot
             drawFrame();
             
-            startY = height / 2;
-            startX = width / 2;
+            startY = (float)height / 2;
+            startX = (float)width / 2;
         }
 
 		private void drawFrame() {
+			if (startX == null || startY == null) {
+				return;
+			}
 			
 			if (calls.get(stepIteration()) == null) {
 	            List<FractalCall> callList = drawFractal(startX, startY, 0, INITIAL_LENGTH, 0);
@@ -226,6 +231,12 @@ public class FractalWallpaper extends WallpaperService {
 			}
 			
 			return randomAngles.get(stepIteration());
+		}
+
+		@Override
+		public void onSharedPreferenceChanged(
+				SharedPreferences sharedPreferences, String key) {
+			
 		}
 	}
 	

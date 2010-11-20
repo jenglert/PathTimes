@@ -15,6 +15,12 @@
             </intent-filter>
             <meta-data android:name="android.service.wallpaper" android:resource="@xml/fractal" />
         </service>
+        <activity
+            android:label="Fractal Settings"
+            android:name=".FractalWallpaperSettings"
+            android:theme="@android:style/Theme.Light.WallpaperSettings"
+            android:exported="true">
+        </activity>
     </application>
     
     <uses-feature android:name="android.software.live_wallpaper" />
