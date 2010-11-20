@@ -5,6 +5,8 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
+import android.media.ExifInterface;
+
 public class ScheduleUtil {
 	
 	/**
@@ -22,6 +24,7 @@ public class ScheduleUtil {
 		
 		for (TrainLine train: trains) {
 			List<Calendar> appropriateArrivalTimes = train.findNextAppropriateArrivalTimes(startStation, travelStart, desiredNumberOfResults);
+			
 			arrivalTimes.addAll(appropriateArrivalTimes);
 		}
 		
@@ -41,6 +44,7 @@ public class ScheduleUtil {
 						desiredNumberOfResults));
 			}
 		}
+		
 		
 		Collections.sort(arrivalTimes);
 		

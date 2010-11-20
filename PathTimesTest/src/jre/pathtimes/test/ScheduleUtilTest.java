@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import android.util.Log;
+
 import jre.pathtimes.ScheduleUtil;
 import jre.pathtimes.Station;
 import jre.pathtimes.TrainLine;
@@ -214,11 +216,11 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 				nextArrivalTimes.get(0));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("11:07 PM"),
 				nextArrivalTimes.get(1));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("11:26 PM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:28 PM"),
 				nextArrivalTimes.get(2));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("11:56 PM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:43 PM"),
 				nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:11 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:58 PM"),
 				nextArrivalTimes.get(4));
 	}
 	
@@ -241,8 +243,8 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		assertClose(ScheduleUtil.convertDateStringToCalendar("10:57 PM"), nextArrivalTimes.get(0));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("11:12 PM"), nextArrivalTimes.get(1));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("11:27 PM"), nextArrivalTimes.get(2));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("11:42 PM"), nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:12 AM"), nextArrivalTimes.get(4));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:45 PM"), nextArrivalTimes.get(3));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:00 AM"), nextArrivalTimes.get(4));
 	}
 	
 	public void testGetNextArrivalTime_4() {
@@ -261,11 +263,11 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 				nextArrivalTimes.get(0));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("12:30 AM"),
 				nextArrivalTimes.get(1));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("01:00 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("01:05 AM"),
 				nextArrivalTimes.get(2));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("01:30 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("01:40 AM"),
 				nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("02:00 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("02:15 AM"),
 				nextArrivalTimes.get(4));
 	}
 	
@@ -277,7 +279,7 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		
 		List<Calendar> results = ScheduleUtil.getNextArrivalTimes(Station.Hoboken, Station.Newark, cal, 5);
 		
-		assertTrue(results == null);
+		assertEquals(0, results.size());
 	}
 	
 	public void testGetNextArrivalTime_6() {
@@ -321,15 +323,15 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		assertNotNull(nextArrivalTimes);
 		assertEquals(5, nextArrivalTimes.size());
 		
-		assertClose(ScheduleUtil.convertDateStringToCalendar("11:36 PM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:38 PM"),
 				nextArrivalTimes.get(0));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:06 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:53 PM"),
 				nextArrivalTimes.get(1));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:21 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:08 AM"),
 				nextArrivalTimes.get(2));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:36 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:38 AM"),
 				nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("01:06 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("01:08 AM"),
 				nextArrivalTimes.get(4));
 	}
 	
@@ -345,15 +347,15 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		assertNotNull(nextArrivalTimes);
 		assertEquals(5, nextArrivalTimes.size());
 		
-		assertClose(ScheduleUtil.convertDateStringToCalendar("03:17 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("03:11 AM"),
 				nextArrivalTimes.get(0));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("03:47 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("03:46 AM"),
 				nextArrivalTimes.get(1));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("04:17 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("04:21 AM"),
 				nextArrivalTimes.get(2));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("04:47 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("04:56 AM"),
 				nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("05:17 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("05:31 AM"),
 				nextArrivalTimes.get(4));
 	}
 	
@@ -369,15 +371,15 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		assertNotNull(nextArrivalTimes);
 		assertEquals(5, nextArrivalTimes.size());
 		
-		assertClose(ScheduleUtil.convertDateStringToCalendar("11:42 PM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("11:45 PM"),
 				nextArrivalTimes.get(0));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:12 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:00 AM"),
 				nextArrivalTimes.get(1));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:27 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:15 AM"),
 				nextArrivalTimes.get(2));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("12:42 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:30 AM"),
 				nextArrivalTimes.get(3));
-		assertClose(ScheduleUtil.convertDateStringToCalendar("01:12 AM"),
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:45 AM"),
 				nextArrivalTimes.get(4));
 	}
 	
@@ -390,7 +392,10 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
 				Station.ThirtyThird, Station.ExchangePlace, cal, 5);
 
-		assertNull(nextArrivalTimes);
+		List<TrainLine> findAppropriateTrainLines = ScheduleUtil.findAppropriateTrainLines(Station.ThirtyThird, Station.ExchangePlace, cal);
+		Log.e("jim", new Integer(findAppropriateTrainLines.size()).toString());
+		
+		assertEquals(0, nextArrivalTimes.size());
 	}
 	
 	public void testGetNextArrivalTime_11() {

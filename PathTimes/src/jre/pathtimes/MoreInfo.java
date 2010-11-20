@@ -18,10 +18,8 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MoreInfo extends Activity {
 
@@ -59,12 +57,7 @@ public class MoreInfo extends Activity {
 	 * The last time the arrow was updated.
 	 */
 	private long lastUpdate = 0;
-	
-	/**
-	 * The previous duration of the animation.
-	 */
-	private float previousAngle = 0;
-	
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
@@ -287,8 +280,6 @@ public class MoreInfo extends Activity {
 		
 		ImageView arrow = (ImageView)findViewById(R.id.arrow);
 		arrow.setImageBitmap(rotatedBitmap);
-		
-		previousAngle = finalAngle;
 	}
 	
 	private void setNotAvailableGraphic() {
