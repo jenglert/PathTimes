@@ -11,34 +11,59 @@ import android.graphics.Paint;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.service.wallpaper.WallpaperService;
-import android.util.Log;
 import android.view.SurfaceHolder;
+import android.widget.Toast;
 
 public class FractalWallpaper extends WallpaperService {
 
 	Handler handler = new Handler();
 	
-	private static final int DECREASE_PER_LEVEL = 7;
-	private static final int INITIAL_LENGTH = 70;
+	public static final String PREFERENCES_NAME = "FRACTAL_PREFERENCES";
+	
+	private static int decreasePerLevel = 7;
+	private static int initialLength = 70;
 	private static final int MINIMUM_LENGTH = 10;
 	private static final int TIME_BETWEEN_STEPS = 1000;
-	private static final double ANGLE_DELTA = Math.PI / 8;
+	private static int[] colors;
 	
-	private static final int MAX_STEPS = INITIAL_LENGTH / DECREASE_PER_LEVEL + ((INITIAL_LENGTH % DECREASE_PER_LEVEL) > 0 ? 1 : 0);
+	private static final int MAX_STEPS = initialLength / decreasePerLevel + ((initialLength % decreasePerLevel) > 0 ? 1 : 0);
 	
-	private static int iterationCount = 0;
 	
 	private Map<Integer, List<FractalCall>> calls = new HashMap<Integer, List<FractalCall>>();
 	private Map<Integer, Double> randomAngles = new HashMap<Integer, Double>();
-
-	private static final int[] COLORS = {
-			0xffff0000,
-			0xff00ff00,
-			0xff0000ff,
-			0xffff00ff,
-			0xff00ffff,
-			0xffffffff
-	};
+	
+	private static Map<String, int[]> colorRanges = null;
+	
+	static {
+		int[] warm = {
+			0xff1A0B05, 0xff794410, 0xffCC3F00, 0xffF87B00, 0xffFFFFFF	
+		};
+		
+		int[] cold = {
+			0xff143B56, 0xffA2BBDE, 0xff90BFF6, 0xffFFFFFF, 0xffA8A593
+		};
+		
+		int[] hippy = {
+			0xff5F3814, 0xffFF0000, 0xffFFFF00, 0xffFFFF00, 0xffD2ABC9
+		};
+		
+		int[] reggae = {
+			0xff1D4618, 0xffFFFF00, 0xffFF0000, 0xffD9BD00, 0xffBB6838
+		};
+		
+		int[] bloodOrange = {
+			0xff0F0006, 0xff380000, 0xff7C0000, 0xffD40000, 0xffFF5E00
+		};
+		
+		colorRanges = new HashMap<String, int[]>();
+		colorRanges.put("warm", warm);
+		colorRanges.put("cold", cold);
+		colorRanges.put("hippy", hippy);
+		colorRanges.put("reggae", reggae);
+		colorRanges.put("bloodOrange", bloodOrange);
+		
+		colors = warm;
+	}
 	
 	@Override
 	public Engine onCreateEngine() {
@@ -52,11 +77,11 @@ public class FractalWallpaper extends WallpaperService {
 		private Float startY = null;
 		private Float startX = null;
 		private long startTime;
-		
+		private SharedPreferences prefs;
 		
         private final Runnable drawFractal = new Runnable() {
             public void run() {
-                drawFrame();
+                drawFrame(true);
             }
         };
 		
@@ -69,18 +94,23 @@ public class FractalWallpaper extends WallpaperService {
             paint.setStrokeCap(Paint.Cap.ROUND);
             paint.setStyle(Paint.Style.STROKE);
             startTime = SystemClock.elapsedRealtime();
+            
+            prefs = FractalWallpaper.this.getSharedPreferences(PREFERENCES_NAME, 0);
+            prefs.registerOnSharedPreferenceChangeListener(this);
+            onSharedPreferenceChanged(prefs, null);
 		}
 		
         @Override
         public void onOffsetsChanged(float xOffset, float yOffset,
                 float xStep, float yStep, int xPixels, int yPixels) {
-            drawFrame();
+            drawFrame(false);
         }
 	
         @Override
         public void onDestroy() {
             super.onDestroy();
             handler.removeCallbacks(drawFractal);
+//            Toast.makeText(getBaseContext(), "onDestroy", 100).show();
         }
         
         @Override
@@ -88,13 +118,15 @@ public class FractalWallpaper extends WallpaperService {
             super.onSurfaceDestroyed(holder);
             visible = false;
             handler.removeCallbacks(drawFractal);
+//            Toast.makeText(getBaseContext(), "onSurfaceDestroy", 100).show();
         }
 		
 		@Override
 		public void onVisibilityChanged(boolean visible) {
+//			Toast.makeText(getBaseContext(), "onVisibilityChanged", 100).show();
             this.visible = visible;
             if (this.visible) {
-                drawFrame();
+                drawFrame(true);
             } else {
                 handler.removeCallbacks(drawFractal);
             }
@@ -102,22 +134,30 @@ public class FractalWallpaper extends WallpaperService {
 
         @Override
         public void onSurfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+//        	Toast.makeText(getBaseContext(), "onSurfaceChanged", 100).show();
             super.onSurfaceChanged(holder, format, width, height);
             // store the center of the surface, so we can draw the cube in the right spot
-            drawFrame();
+            drawFrame(false);
             
             startY = (float)height / 2;
             startX = (float)width / 2;
         }
 
-		private void drawFrame() {
+		private void drawFrame(boolean clear) {
 			if (startX == null || startY == null) {
 				return;
 			}
 			
 			if (calls.get(stepIteration()) == null) {
-	            List<FractalCall> callList = drawFractal(startX, startY, 0, INITIAL_LENGTH, 0);
-	            callList.addAll(drawFractal(startX, startY, Math.PI, INITIAL_LENGTH, 0));
+				List<FractalCall> callList = new ArrayList<FractalCall>();
+				List<FractalCall> callSide = drawFractal(startX, startY, 0, initialLength, 0);
+				if (callSide != null) {
+					callList.addAll(callSide);
+				}
+				callSide = drawFractal(startX, startY, Math.PI, initialLength, 0);
+				if (callSide != null) {
+					callList.addAll(callSide);
+				}
 	            calls.put(stepIteration(), callList);
 			}
 			
@@ -127,13 +167,16 @@ public class FractalWallpaper extends WallpaperService {
             try {
                 c = holder.lockCanvas();
                 if (c != null)  {
-                		iterationCount = 0;
                 	
                 		c.save();
                 		
                 		// Clear the canvas when we are done drawing
-                		if (currentStep() == 0) {
+                		if (currentStep() == 0 || clear) {
                 			c.drawColor(0xff000000);
+                			
+                			// Clear out the containers that hold step based information
+                			calls.clear();
+                			randomAngles.clear();
                 		}
 
             			drawCalls(c, currentStep());
@@ -152,32 +195,27 @@ public class FractalWallpaper extends WallpaperService {
 		}
 
 		private void drawCalls(Canvas c, int step) {
+			
 			if (calls.get(stepIteration()) == null)
 				return;
 			for (FractalCall call: calls.get(stepIteration())) {
 				if (call.step <= step) {
 					paint.setColor(call.color);
+					//Log.e("drawing", "From " + call.x + " to " + call.y + " @ " + call.currentAngle + " with length:" + call.length + " and color " + call.color);
 					drawLine(c, call.x, call.y, call.currentAngle, call.length);
 				}
 			}
 		}
 		
 		private List<FractalCall> drawFractal(double startX, double startY, double currentAngle, float length, int step) {
+//			Log.e("fractal", "X:" + startX + " Y:" + startY + " angle:" + currentAngle + " len:" + length + " step:" + step);
 			// Stop processing if we are not at the current step or the length that we would draw is too short.
 			if (length <= MINIMUM_LENGTH) {
 				return null;
 			}
 			
-			Log.e("max_steps", String.valueOf(MAX_STEPS));
-			
-			// Increment the count of the number of iterations we have experienced.
-			iterationCount++;
-			
 			double leftAngle = currentAngle + randomAngle();
 			double rightAngle = currentAngle - randomAngle();
-			
-//			drawLine(c, startX, startY, leftAngle, length);
-//			drawLine(c, startX, startY, rightAngle, length);
 			
 			List<FractalCall> fractals = new ArrayList<FractalCall>();
 			
@@ -186,16 +224,16 @@ public class FractalWallpaper extends WallpaperService {
 			
 			List<FractalCall> fracs = 
 				drawFractal(startX + length * Math.sin(leftAngle), startY + length * Math.cos(leftAngle), leftAngle, 
-						length - DECREASE_PER_LEVEL, step + 1);
+						length - decreasePerLevel, step + 1);
 			if (fracs != null) {
 				fractals.addAll(fracs);
 			}
 			fracs = drawFractal(startX + length * Math.sin(rightAngle), startY + length * Math.cos(rightAngle), rightAngle,
-					length - DECREASE_PER_LEVEL, step + 1);
+					length - decreasePerLevel, step + 1);
 			if (fracs != null) {
 				fractals.addAll(fracs);
 			}
-		
+			
 			return fractals;
 		}
 		
@@ -222,7 +260,7 @@ public class FractalWallpaper extends WallpaperService {
 		}
 		
 		private int randomColor() { 
-			return COLORS[(int) (Math.round(Math.random() * COLORS.length) % COLORS.length)];
+			return colors[(int) (Math.round(Math.random() * colors.length) % colors.length)];
 		}
 		
 		private double randomAngle() {
@@ -232,11 +270,21 @@ public class FractalWallpaper extends WallpaperService {
 			
 			return randomAngles.get(stepIteration());
 		}
+		
+		private void resetAnimation() {
+			startTime = SystemClock.elapsedRealtime();
+		}
 
 		@Override
 		public void onSharedPreferenceChanged(
 				SharedPreferences sharedPreferences, String key) {
+//			Toast.makeText(getBaseContext(), "onPreferencesChanged", 100).show();
 			
+			initialLength = FractalWallpaperSettings.getInitialLineLength(sharedPreferences, getBaseContext());
+			decreasePerLevel = FractalWallpaperSettings.getDecreasePerLevel(sharedPreferences, getBaseContext());
+			colors = colorRanges.get(sharedPreferences.getString("fractal_colorPalettes", "warm"));
+			
+			resetAnimation();
 		}
 	}
 	

@@ -3,15 +3,19 @@
 	<string name="app_name">Fractal</string>
 	<string name="description">A highly configurable fractal background.</string>
 	
-	<string-array name="fractal_startingLineLength">
-        <item>"100"</item>
-        <item>"90"</item>
-        <item>"80"</item>
-        <item>"70"</item>
-        <item>"60"</item>
-        <item>"50"</item>
-        <item>"40"</item>
-        <item>"30"</item>
-        <item>"20"</item>
+	<string-array name="fractal_colorPalettes">
+        <item>"warm"</item>
+        <item>"cold"</item>
+        <item>"hippy"</item>
+        <item>"reggae"</item>
+        <item>"bloodOrange"</item>
+    </string-array>
+    
+        <string-array name="fractal_colorPalettesNames">
+        <item>"Warm"</item>
+        <item>"Cold"</item>
+        <item>"Hippy"</item>
+        <item>"Reggae"</item>
+        <item>"Blood Orange"</item>
     </string-array>
 </resources>

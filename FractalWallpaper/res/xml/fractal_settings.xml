@@ -20,12 +20,21 @@
 
     <EditTextPreference
             android:key="fractal_initialLineLength"
-            android:title="Initial line length"
+            android:title="Initial Line Length"
+            android:inputType="phone"
             android:summary="The starting length for a line"/>
             
     <EditTextPreference
             android:key="fractal_lineLengthDecrease"
-            android:title="Line length decrease"
+            android:title="Line Length Decrease"
+            android:inputType="phone"
             android:summary="The amount a line will decrease with each iteration"/> 
+            
+    <ListPreference
+            android:key="fractal_colorPalettes"
+            android:title="Color Palette"
+            android:summary="A color palette for the fractal"
+            android:entries="@array/fractal_colorPalettesNames"
+            android:entryValues="@array/fractal_colorPalettes" />
 
 </PreferenceScreen>
