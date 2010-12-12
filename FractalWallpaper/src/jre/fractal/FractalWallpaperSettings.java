@@ -38,8 +38,8 @@ public class FractalWallpaperSettings extends PreferenceActivity
 	/**
 	 * Retrieves the initial line length for the fractal.
 	 */
-	public static int getInitialLineLength(SharedPreferences sharedPreferences, Context context) {
-		int initialLength = FractalWallpaperSettings.DEFAULT_INITIAL_LENGTH;
+	public static Integer getInitialLineLength(SharedPreferences sharedPreferences, Context context) {
+		Integer initialLength = FractalWallpaperSettings.DEFAULT_INITIAL_LENGTH;
 		try {
 			initialLength = Integer.valueOf(sharedPreferences.getString("fractal_initialLineLength", DEFAULT_INITIAL_LENGTH.toString()));
 		}
@@ -52,8 +52,8 @@ public class FractalWallpaperSettings extends PreferenceActivity
 		return initialLength;
 	}
 	
-	public static int getDecreasePerLevel(SharedPreferences sharedPreferences, Context context) {
-		int decreasePerLevel = FractalWallpaperSettings.DEFAULT_LINE_DECREASE;
+	public static Integer getDecreasePerLevel(SharedPreferences sharedPreferences, Context context) {
+		Integer decreasePerLevel = FractalWallpaperSettings.DEFAULT_LINE_DECREASE;
 		try {
 			decreasePerLevel = Integer.valueOf(sharedPreferences.getString(
 					"fractal_lineLengthDecrease",
