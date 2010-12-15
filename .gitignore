@@ -2,7 +2,8 @@ PathTimes/bin
 PathTimesTest/bin
 #java specific
 *.class
-
+*.dex
+*/bin
 
 ## generic files to ignore
 *~
