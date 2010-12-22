@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/stopSelectionLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background_gray">
     
-    <TextView android:text="The 126 Bus"
+    <TextView android:text="Choose the Closest Stop"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content" 
               android:textSize="30dip"
@@ -14,16 +15,5 @@
               android:paddingBottom="20dip"
               />
     
-    <Button android:text="From NYC"
-            android:gravity="center"
-            android:textSize="30dip"
-            android:onClick="selectFromNYC"
-    />
-    
-    <Button android:text="To NYC"
-            android:gravity="center"
-            android:textSize="30dip"
-            android:onClick="selectToNYC"
-    />
     
 </TableLayout >

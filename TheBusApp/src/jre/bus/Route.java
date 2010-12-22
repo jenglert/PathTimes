@@ -161,6 +161,26 @@ public enum Route {
 		this.direction = direction;
 		this.day = day;
 	}
+	
+	/**
+	 * Converts start times to an array of milliseconds since the beginning of the day.
+	 */
+	public long[] getStartTimesAsMillisecondsSinceBeginningOfDay() {
+		long[] times = new long[this.startTimes.length];
+		
+		for (int i = 0 ; i < startTimes.length; i++) {
+			times[i] = convertNumberToMillisecondsSinceBeginningOfDay(startTimes[i]);
+		}
+		
+		return times;
+	}
+	
+	public static long convertNumberToMillisecondsSinceBeginningOfDay(Integer time) {
+		int minutes = time % 100;
+		int hours = time / 100;
+		
+		return (minutes + hours * 60) * 60 * 1000;
+	}
 
 	public String getName() {
 		return name;
@@ -193,5 +213,8 @@ public enum Route {
 	public void setDirection(TrainDirection direction) {
 		this.direction = direction;
 	}
-	
+
+	public Day getDay() {
+		return this.day;
+	}
 }

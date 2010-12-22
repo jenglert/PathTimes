@@ -1,5 +1,6 @@
 package jre.bus;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import android.content.Context;
@@ -13,10 +14,20 @@ public class RouteDataLoader {
 	}
 	
 	public void loadUpcomingDays(int days) {
-		Date currentDay = new Date();
+		Calendar currentDay = Calendar.getInstance();
+		currentDay.set(Calendar.HOUR, 0);
+		currentDay.set(Calendar.MINUTE, 0);
+		currentDay.set(Calendar.SECOND, 0);
+		currentDay.set(Calendar.MILLISECOND, 0);
 		
 		for (int i = 0; i < days; i++) {
-			
+			for (Route route : Route.values()) {
+				if (route.getDay().matches(currentDay)) {
+					for (Integer date : route.getStartTimes()) {
+						
+					}
+				}
+			}
 		}
 	}
 	

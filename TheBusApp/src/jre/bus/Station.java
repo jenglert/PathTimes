@@ -17,7 +17,12 @@ public enum Station {
 	HAMILTONPARK,
 	HOBOKENTERMINAL;
 	
-	Station() {
+	/**
+	 * The order that the station is encountered.  We assume the order based on buses coming from NYC
+	 */
+	private Integer order;
+	
+	Station(Integer order) {
 		
 	}
 }
