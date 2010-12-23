@@ -5,6 +5,14 @@ public enum TrainDirection {
 	
 	private Integer id;
 	
+	public boolean isFromNYC() {
+		return FROM_NYC.id.equals(this.id);
+	}
+	
+	public boolean isToNYC() {
+		return TO_NYC.id.equals(this.id);
+	}
+	
 	/**
 	 * Attempts to find a TrainDirection based on an id.  If none is found, returns null.
 	 */

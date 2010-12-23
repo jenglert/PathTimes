@@ -1,9 +1,13 @@
 package jre.bus;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.TableLayout;
+import android.widget.LinearLayout;
 
 public class StopSelection extends Activity {
 
@@ -15,10 +19,24 @@ public class StopSelection extends Activity {
 		
 		setContentView(R.layout.stop_selection);
 		
-		TableLayout tableLayout = (TableLayout) findViewById(R.id.stopSelectionLayout);
+		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.stopSelectionLayout);
 		
-		Button button = new Button(getApplicationContext());
-		tableLayout.addView(button);
+		Set<Station> stations = new HashSet<Station>();
+		for (Route route: Route.values()) {
+			if (route.getDirection().equals(direction)) {
+				Collections.addAll(stations, route.getStations());
+			}
+		}
+		
+		Station[] stationsArray = stations.toArray(new Station[stations.size()]);
+		Station.stationsInOrder(direction, stationsArray);
+		
+		for (Station station : stationsArray) {
+			Button button = new Button(getApplicationContext());
+			button.setText(station.getName());
+		
+			linearLayout.addView(button);
+		}
 		
 	}
 
