@@ -1,7 +1,6 @@
 package jre.bus;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public enum Day {
 	WEEKDAY, SATURDAY, SUNDAY;

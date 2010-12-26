@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/stationSpecificSelectLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_gray">
+    
+    <TextView android:text="Pick Station"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" 
+              android:textSize="30dip"
+              android:gravity="center_horizontal"
+              android:textColor="@color/black"
+              />
+    
+    
+</LinearLayout >

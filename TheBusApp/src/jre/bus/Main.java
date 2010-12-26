@@ -1,5 +1,7 @@
 package jre.bus;
 
+import java.util.Date;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +13,9 @@ public class Main extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+        // Create all the train times for the next 3 days.
+        new RouteDataLoader(getApplicationContext()).loadUpcomingDays(new Date(), 1);
     }
     
     public void selectFromNYC(View theButton) {

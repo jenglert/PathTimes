@@ -1,7 +1,12 @@
 package jre.bus;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -21,31 +26,83 @@ public class RouteDataHelper {
 
 	private SQLiteStatement insertStmt;
 	private static final String INSERT = "insert into " + TABLE_NAME
-			+ "(name) values (?)";
+			+ "(route, start_time) values (?, ?)";
 
 	public RouteDataHelper(Context context) {
 	      this.context = context;
 	      OpenHelper openHelper = new OpenHelper(this.context);
 	      this.db = openHelper.getWritableDatabase();
 	      this.insertStmt = this.db.compileStatement(INSERT);
-	   }
+	}
 
-	public long insert(String name) {
-	      this.insertStmt.bindString(1, name);
+	public long insert(String route, long startTime) {
+	      this.insertStmt.bindString(1, route);
+	      this.insertStmt.bindLong(2, startTime);
 	      return this.insertStmt.executeInsert();
 	   }
 
 	public void deleteAll() {
 		this.db.delete(TABLE_NAME, null, null);
 	}
+	
+	public SortedSet<Long> nextFiveBuses(Date startTime, Station station, TrainDirection direction) {
+		SortedSet<Long> nextBuses = new TreeSet<Long>();
+		
+		List<Route> appropriateRoutes = new ArrayList<Route>();
+		for (Route route : Route.values()) {
+			if ( route.getDirection().equals(direction)) {
+				if (ArrayUtil.contains(route.getStations(), station)) {
+					appropriateRoutes.add(route);
+				}
+			}
+		}
+		
+		if (appropriateRoutes.size() <= 0) {
+			throw new RuntimeException("Failed to find even one appropriate route.");
+		}
+		
+		StringBuilder routeString = new StringBuilder();
+		
+		for (int i = 0; i < appropriateRoutes.size(); i++) {
+			Route route = appropriateRoutes.get(i);
+			routeString.append("'" + route.name() + "'");
+			
+			if (i < appropriateRoutes.size() - 2) {
+				routeString.append(",");
+			}
+		}
+		
+		
+		Cursor cursor = this.db.query(TABLE_NAME, new String[] { 
+				"start_time" }, "start_time > " + startTime.getTime()
+				+ " and route in (" + routeString.toString() + ")", null, null,
+				null, "start_time asc", "5");
+		
+		if (cursor.moveToFirst()) {
+			do {
+				nextBuses.add(cursor.getLong(0));
+			} while (cursor.moveToNext());
+		}
+		
+		
+		if (cursor != null && !cursor.isClosed()) {
+			cursor.close();
+		}
+		
+		return nextBuses;
+	}
 
-	public List<String> selectAll() {
-	      List<String> list = new ArrayList<String>();
-	      Cursor cursor = this.db.query(TABLE_NAME, new String[] { "name" }, 
-	        null, null, null, null, "name desc");
+	public List<Map<String, Object>> selectAll() {
+	      List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+	      Cursor cursor = this.db.query(TABLE_NAME, new String[] { "route, start_time" }, 
+	        null, null, null, null, "start_time asc");
 	      if (cursor.moveToFirst()) {
 	         do {
-	            list.add(cursor.getString(0)); 
+	        	 	Map<String, Object> rowList = new HashMap<String, Object>();
+	            rowList.put("route", cursor.getString(0));
+	            rowList.put("start_time", cursor.getLong(1));
+	            
+	            list.add(rowList);
 	         } while (cursor.moveToNext());
 	      }
 	      if (cursor != null && !cursor.isClosed()) {
