@@ -7,7 +7,7 @@ public enum Route {
 	 *****************************/
 
 	// Washington Street
-	WEEKDAY_WASHINGTON_STREET_TO_NYC ("WEEKDAY_WASHINGTON_STREET_TO_NYC", 
+	WEEKDAY_WASHINGTON_STREET_TO_NYC ( 
 			new Integer[] { 00, 30, 100,
 			130, 510, 540, 600, 608, 616, 622, 632, 640, 650, 655, 700, 706,
 			712, 717, 723, 729, 732, 736, 738, 741, 745, 748, 750, 752, 754,
@@ -25,36 +25,42 @@ public enum Route {
 			Station.FIFTHANDWASHINGTON, Station.ELEVENTHANDWASHINGTON, 
 			Station.FOURTEENTHANDWASHINGTON, Station.FOURTEENTHANDWILLOW, 
 			Station.PABT},
-			TrainDirection.TO_NYC, Day.WEEKDAY),
+			TrainDirection.TO_NYC, Day.WEEKDAY, new int[] {
+					1, 2, 2, 2, 2, 12
+			}),
 
 	// Clinton Street to NYC
-	WEEKDAY_CLINTON_STREET_TO_NYC("WEEKDAY_CLINTON_STREET_TO_NYC", new Integer[] { 635, 640, 655,
+	WEEKDAY_CLINTON_STREET_TO_NYC(new Integer[] { 635, 640, 655,
 			705, 709, 717, 720, 726, 731, 737, 739, 743, 745, 747, 749, 751,
 			753, 757, 759, 801, 803, 807, 809, 813, 815, 822, 825, 829, 836,
 			848, 855, 912, 920 },
 			new Station[] {
 			Station.HOBOKENTERMINAL, Station.FIRSTANDCLINTON, Station.FIFTHANDCLINTON, 
 			Station.ELEVENTHANDCLINTON, Station.FOURTEENTHANDWILLOW, Station.PABT
-		}, TrainDirection.TO_NYC, Day.WEEKDAY),
+		}, TrainDirection.TO_NYC, Day.WEEKDAY, new int[] {
+			5, 2, 2, 2, 14
+		}),
 
 	// Clinon Street from JC to NYC
-	WEEKDAY_CLINTON_STREET_FROM_JC_TO_NYC("WEEKDAY_CLINTON_STREET_FROM_JC_TO_NYC", new Integer[] { 643, 653,
+	WEEKDAY_CLINTON_STREET_FROM_JC_TO_NYC(new Integer[] { 643, 653,
 			706, 712, 725, 731, 745, 755, 801, 808, 823, 832, 854 },
 			new Station[] {
 			Station.HAMILTONPARK, Station.EIGHTENTHANDGROVE, Station.FIRSTANDCLINTON, Station.FIFTHANDCLINTON,
 			Station.ELEVENTHANDCLINTON, Station.FOURTEENTHANDWILLOW, Station.PABT
-		}, TrainDirection.TO_NYC, Day.WEEKDAY),
+		}, TrainDirection.TO_NYC, Day.WEEKDAY, new int[] { 7, 3, 2, 3, 3, 14 }),
 
 	// Weekday Clinton street local
-	WEEKDAY_CLINTON_STREET_LOCAL("WEEKDAY_CLINTON_STREET_LOCAL", new Integer[] { 1600, 1620, 1640,
+	WEEKDAY_CLINTON_STREET_LOCAL(new Integer[] { 1600, 1620, 1640,
 			1700, 1715, 1725, 1735, 1745, 1800, 1820, 1840, 1900, 1920, 1940,
 			2000, 2020 },
 			new Station[] {
 			Station.HOBOKENTERMINAL, Station.FIRSTANDCLINTON, Station.FIFTHANDCLINTON, Station.ELEVENTHANDCLINTON
-		}, TrainDirection.TO_NYC, Day.WEEKDAY),
+		}, TrainDirection.TO_NYC, Day.WEEKDAY, new int[] { 
+			5, 3, 3
+		}),
 
 	// Saturday Washington street to NYC
-	SATURDAY_WASHINGTON_STREET_TO_NYC("SATURDAY_WASHINGTON_STREET_TO_NYC",
+	SATURDAY_WASHINGTON_STREET_TO_NYC(
 			new Integer[] { 00, 25, 55,
 			130, 600, 630, 650, 710, 730, 750, 810, 830, 850, 910, 930, 950,
 			1010, 1030, 1050, 1110, 1130, 1150, 1210, 1230, 1250, 1310, 1330,
@@ -66,10 +72,12 @@ public enum Route {
 			Station.FIFTHANDWASHINGTON, Station.ELEVENTHANDWASHINGTON, 
 			Station.FOURTEENTHANDWASHINGTON, Station.FOURTEENTHANDWILLOW, 
 			Station.PABT
-		}, TrainDirection.FROM_NYC, Day.SATURDAY),
+		}, TrainDirection.TO_NYC, Day.SATURDAY, new int[] {
+				1, 2, 2, 2, 2, 12
+		}),
 
 	// Sunday Washington Street to NYC
-	SUNDAY_WASHINGTON_STREET_TO_NYC("SUNDAY_WASHINGTON_STREET_TO_NYC",
+	SUNDAY_WASHINGTON_STREET_TO_NYC(
 			new Integer[] { 30, 130, 700,
 			800, 900, 930, 1000, 1030, 1050, 1110, 1130, 1150, 1210, 1230,
 			1250, 1310, 1330, 1350, 1410, 1430, 1450, 1510, 1530, 1550, 1610,
@@ -79,31 +87,34 @@ public enum Route {
 			Station.FIFTHANDWASHINGTON, Station.ELEVENTHANDWASHINGTON, 
 			Station.FOURTEENTHANDWASHINGTON, Station.FOURTEENTHANDWILLOW, 
 			Station.PABT}, 
-			TrainDirection.TO_NYC, Day.SUNDAY),
+			TrainDirection.TO_NYC, Day.SUNDAY, new int[] {
+					1, 2, 2, 2, 2, 12
+			}),
 
 	/*****************************
 	 * NYC - NJ *
 	 *****************************/
 
-	WEEKDAY_WILLOW_AVE_TO_NJ("WEEKDAY_WILLOW_AVE_TO_NJ", new Integer[] { 1732, 1744, 1755,
+	WEEKDAY_WILLOW_AVE_TO_NJ(new Integer[] { 1732, 1744, 1755,
 			1810, 1815, 1826, 1850, 1856, 1908, 1914, 1922, 1930 },
 			new Station[] { Station.PABT, Station.FOURTEENTHANDWILLOW, Station.ELEVENTHANDWILLOW,
-			Station.FIFTHANDWILLOW, Station.FIRSTANDWILLOW, Station.HOBOKENTERMINAL}, TrainDirection.FROM_NYC, Day.WEEKDAY),
+			Station.FIFTHANDWILLOW, Station.FIRSTANDWILLOW, Station.HOBOKENTERMINAL}, TrainDirection.FROM_NYC, Day.WEEKDAY,
+			new int[] {  18, 3, 3, 3, 3}),
 
-	WEEKDAY_WILLOW_AV_TO_JC("WEEKDAY_WILLOW_AV_TO_JC", new Integer[] { 1700, 1718, 1726,
+	WEEKDAY_WILLOW_AV_TO_JC(new Integer[] { 1700, 1718, 1726,
 			1738, 1750, 1805, 1820, 1832, 1838, 1844, 1902, 1940, 2040, 2142 }, 
 			new Station[] {
 			Station.PABT, Station.FOURTEENTHANDWILLOW, Station.ELEVENTHANDWILLOW,
 			Station.FIFTHANDWILLOW, Station.FIRSTANDWILLOW, Station.HAMILTONPARK
-		}, TrainDirection.FROM_NYC, Day.WEEKDAY),
+		}, TrainDirection.FROM_NYC, Day.WEEKDAY, new int[] { 18, 3, 3, 3, 10}), 
 
-	WEEKDAY_WILLOW_AVE_LOCAL("WEEKDAY_WILLOW_AVE_LOCAL", new Integer[] { 618, 630, 640, 650,
+	WEEKDAY_WILLOW_AVE_LOCAL(new Integer[] { 618, 630, 640, 650,
 			700, 710, 720, 730, 740, 750, 800, 810, 820, 830, 840, 850, 900 }, new Station[] {
 			Station.FOURTEENTHANDWILLOW, Station.ELEVENTHANDWILLOW,
 			Station.FIFTHANDWILLOW, Station.FIRSTANDWILLOW, Station.HOBOKENTERMINAL
-		}, TrainDirection.FROM_NYC, Day.WEEKDAY),
+		}, TrainDirection.FROM_NYC, Day.WEEKDAY, new int[] { 2, 2, 3, 3}),
 
-	WEEKDAY_WASHINGTON_ST_TO_NJ("WEEKDAY_WASHINGTON_ST_TO_NJ",  new Integer[] { 00, 30, 55, 130,
+	WEEKDAY_WASHINGTON_ST_TO_NJ(new Integer[] { 00, 30, 55, 130,
 			200, 535, 605, 630, 640, 650, 700, 710, 715, 720, 730, 734, 736,
 			741, 747, 756, 758, 800, 803, 805, 806, 809, 812, 816, 818, 820,
 			822, 824, 826, 828, 832, 836, 838, 840, 842, 846, 850, 854, 858,
@@ -119,9 +130,9 @@ public enum Route {
 			new Station[] {
 			Station.PABT, Station.FOURTEENTHANDWILLOW, Station.FOURTEENTHANDWASHINGTON, Station.ELEVENTHANDWASHINGTON,
 			Station.FIFTHANDWASHINGTON, Station.FIRSTANDWASHINGTON, Station.HOBOKENTERMINAL
-		}, TrainDirection.FROM_NYC, Day.WEEKDAY),
+		}, TrainDirection.FROM_NYC, Day.WEEKDAY, new int[] { 14, 2, 3, 2, 2, 2}),
 
-	SATURDAY_WASHINGTON_ST_TO_NJ("SATURDAY_WASHINGTON_ST_TO_NJ", new Integer[] { 25, 55, 130, 200,
+	SATURDAY_WASHINGTON_ST_TO_NJ(new Integer[] { 25, 55, 130, 200,
 			630, 700, 720, 740, 800, 820, 840, 900, 920, 940, 1000, 1020, 1040,
 			1100, 1120, 1135, 1155, 1215, 1235, 1255, 1315, 1335, 1355, 1415,
 			1435, 1455, 1515, 1535, 1555, 1615, 1635, 1655, 1715, 1735, 1755,
@@ -130,9 +141,9 @@ public enum Route {
 			new Station[] {
 			Station.PABT, Station.FOURTEENTHANDWILLOW, Station.FOURTEENTHANDWASHINGTON, Station.ELEVENTHANDWASHINGTON,
 			Station.FIFTHANDWASHINGTON, Station.FIRSTANDWASHINGTON, Station.HOBOKENTERMINAL
-		}, TrainDirection.FROM_NYC, Day.SATURDAY),
+		}, TrainDirection.FROM_NYC, Day.SATURDAY, new int[] { 11, 1, 2, 2, 2, 2}),
 
-	SUNDAY_WASHINGTON_ST_TO_NJ("SUNDAY_WASHINGTON_ST_TO_NJ",
+	SUNDAY_WASHINGTON_ST_TO_NJ(
 			new Integer[] { 00, 55, 200, 700,
 			830, 930, 1000, 1030, 1100, 1120, 1140, 1200, 1220, 1240, 1300,
 			1320, 1340, 1400, 1420, 1440, 1500, 1520, 1540, 1600, 1620, 1640,
@@ -141,10 +152,8 @@ public enum Route {
 			new Station[] {
 			Station.PABT, Station.FOURTEENTHANDWILLOW, Station.FOURTEENTHANDWASHINGTON, Station.ELEVENTHANDWASHINGTON,
 			Station.FIFTHANDWASHINGTON, Station.FIRSTANDWASHINGTON, Station.HOBOKENTERMINAL
-		}, TrainDirection.FROM_NYC, Day.SUNDAY);
+		}, TrainDirection.FROM_NYC, Day.SUNDAY, new int[] { 11, 1, 2, 2, 2, 2});
 	
-	
-	private String name;
 	
 	private Integer[] startTimes;
 	
@@ -154,12 +163,34 @@ public enum Route {
 	
 	private Day day;
 	
-	private Route(String name, Integer[] startTimes, Station[] stations, TrainDirection direction, Day day) {
-		this.name = name;
+	private int[] travelTimes;
+	
+	private Route(Integer[] startTimes, Station[] stations, TrainDirection direction, Day day, int[] travelTimes) {
 		this.startTimes = startTimes;
 		this.stations = stations;
 		this.direction = direction;
 		this.day = day;
+		this.travelTimes = travelTimes;
+	}
+	
+	public int[] getTravelTimes() {
+		return this.travelTimes;
+	}
+	
+	public int getTravelTime(Station destinationStation) {
+		int travelTime = 0;
+		
+		for (int i = 0; i < stations.length; i++) {
+			Station station = stations[i];
+			
+			if (station.equals(destinationStation)) {
+				return travelTime;
+			}
+			
+			travelTime = travelTime + travelTimes[i];
+		}
+		
+		throw new RuntimeException("Unable to determine travel time.");
 	}
 	
 	/**
@@ -180,14 +211,6 @@ public enum Route {
 		int hours = time / 100;
 		
 		return (minutes + hours * 60) * 60 * 1000;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public Integer[] getStartTimes() {

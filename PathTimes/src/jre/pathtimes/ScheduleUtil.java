@@ -5,8 +5,6 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
-import android.media.ExifInterface;
-
 public class ScheduleUtil {
 	
 	/**

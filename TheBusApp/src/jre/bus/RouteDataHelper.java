@@ -1,11 +1,13 @@
 package jre.bus;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
+import java.util.TimeZone;
 import java.util.TreeSet;
 
 import android.content.Context;
@@ -23,9 +25,9 @@ public class RouteDataHelper {
 
 	private Context context;
 	private SQLiteDatabase db;
-
+	
 	private SQLiteStatement insertStmt;
-	private static final String INSERT = "insert into " + TABLE_NAME
+	private static final String INSERT = "insert or ignore into " + TABLE_NAME
 			+ "(route, start_time) values (?, ?)";
 
 	public RouteDataHelper(Context context) {
@@ -39,14 +41,67 @@ public class RouteDataHelper {
 	      this.insertStmt.bindString(1, route);
 	      this.insertStmt.bindLong(2, startTime);
 	      return this.insertStmt.executeInsert();
-	   }
+	 }
+	
+	public void close() {
+		if (db != null && db.isOpen()) {
+			db.close();
+		}
+	}
 
 	public void deleteAll() {
 		this.db.delete(TABLE_NAME, null, null);
 	}
 	
-	public SortedSet<Long> nextFiveBuses(Date startTime, Station station, TrainDirection direction) {
-		SortedSet<Long> nextBuses = new TreeSet<Long>();
+	public long getMaxStartTime() {
+		Cursor cursor = this.db.query(TABLE_NAME, new String[] { "max(start_time)" }, null , null, null, null, null);
+		
+		if (cursor.moveToFirst()) {
+			do {
+				return cursor.getLong(0);
+			} while (cursor.moveToNext());
+		}
+		
+		
+		if (cursor != null && !cursor.isClosed()) {
+			cursor.close();
+		}
+		
+		return 0;
+	}
+	
+	/**
+	 * Returns true iff there are any available times for this route after the start time. 
+	 */
+	public boolean hasAvailableTime(Date startTime, Route route) {
+		Calendar fiveHoursFromStartTime = Calendar.getInstance();
+		fiveHoursFromStartTime.setTimeZone(TimeZone.getTimeZone("EST"));
+		fiveHoursFromStartTime.setTime(startTime);
+		fiveHoursFromStartTime.add(Calendar.HOUR, 5);
+		
+		Cursor cursor = this.db.query(TABLE_NAME,
+				new String[] { "start_time" }, "start_time between "
+						+ startTime.getTime() + " and "
+						+ fiveHoursFromStartTime.getTimeInMillis()
+						+ " and route = '" + route.name() + "'", null, null,
+				null, "start_time asc", "5");
+
+		if (cursor.moveToFirst()) {
+			do {
+				return true;
+			} while (cursor.moveToNext());
+		}
+		
+		
+		if (cursor != null && !cursor.isClosed()) {
+			cursor.close();
+		}
+		
+		return false;
+	}
+	
+	public List<Snake<Long, String>> nextFiveBuses(Date startTime, Station station, TrainDirection direction) {
+		SortedSet<Snake<Long, String>> nextBuses = new TreeSet<Snake<Long, String>>();
 		
 		List<Route> appropriateRoutes = new ArrayList<Route>();
 		for (Route route : Route.values()) {
@@ -67,20 +122,21 @@ public class RouteDataHelper {
 			Route route = appropriateRoutes.get(i);
 			routeString.append("'" + route.name() + "'");
 			
-			if (i < appropriateRoutes.size() - 2) {
+			if (i < appropriateRoutes.size() - 1) {
 				routeString.append(",");
 			}
 		}
 		
 		
 		Cursor cursor = this.db.query(TABLE_NAME, new String[] { 
-				"start_time" }, "start_time > " + startTime.getTime()
+				"start_time", "route"}, "start_time > " + startTime.getTime()
 				+ " and route in (" + routeString.toString() + ")", null, null,
-				null, "start_time asc", "5");
+				null, "start_time asc");
 		
 		if (cursor.moveToFirst()) {
 			do {
-				nextBuses.add(cursor.getLong(0));
+				nextBuses.add(new Snake<Long, String>(cursor.getLong(0), cursor.getString(1)));
+				
 			} while (cursor.moveToNext());
 		}
 		
@@ -89,7 +145,19 @@ public class RouteDataHelper {
 			cursor.close();
 		}
 		
-		return nextBuses;
+		List<Snake<Long, String>> fiveBuses = new ArrayList<Snake<Long, String>>();
+		
+		int i  = 0;
+		for (Snake<Long, String> bus : nextBuses) {
+			
+			if (i < 5) {
+				fiveBuses.add(bus);
+			}
+			
+			i++;
+		}
+		
+		return fiveBuses;
 	}
 
 	public List<Map<String, Object>> selectAll() {

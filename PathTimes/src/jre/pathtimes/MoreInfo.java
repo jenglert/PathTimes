@@ -80,13 +80,6 @@ public class MoreInfo extends Activity {
 	}
 
 	@Override
-	public void onBackPressed() {
-		super.onBackPressed();
-		
-		unRegisterHandlers();
-	}
-
-	@Override
 	protected void onStart() {
 		super.onStart();
 		

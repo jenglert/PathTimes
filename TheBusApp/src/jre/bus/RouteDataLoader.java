@@ -1,7 +1,6 @@
 package jre.bus;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.TimeZone;
 
 import android.content.Context;
@@ -14,27 +13,33 @@ public class RouteDataLoader {
 		 routeDataHelper = new RouteDataHelper(context);
 	}
 	
-	public void loadUpcomingDays(Date startDate, int days) {
-		routeDataHelper.deleteAll();
+	public void loadUpcomingDays(Calendar startDate, int hours) {
 		
-		Calendar currentDay = Calendar.getInstance();
-		currentDay.setTime(startDate);
-		currentDay.setTimeZone(TimeZone.getTimeZone("EST"));
-		currentDay.set(Calendar.HOUR, 0);
-		currentDay.set(Calendar.MINUTE, 0);
-		currentDay.set(Calendar.SECOND, 0);
-		currentDay.set(Calendar.MILLISECOND, 0);
+		Calendar currentCal = Calendar.getInstance();
+		currentCal.setTimeZone(TimeZone.getTimeZone("EST"));
+		currentCal.setTimeInMillis(startDate.getTimeInMillis());
 		
-		for (int i = 0; i < days; i++) {
+		Long maxStartTime = routeDataHelper.getMaxStartTime();
+		
+		for (int i = 0; i < hours; i++) {
+			long beginningOfDay = DateUtil.beginningOfDay(currentCal).getTimeInMillis();
+			
 			for (Route route : Route.values()) {
-				if (route.getDay().matches(currentDay)) {
+				if (route.getDay().matches(currentCal)) {
 					for (long date : route.getStartTimesAsMillisecondsSinceBeginningOfDay()) {
-						routeDataHelper.insert(route.name(), currentDay.getTimeInMillis() + date);
+						long trainTime = beginningOfDay + date;
+						if (trainTime > currentCal.getTimeInMillis() &&  // Only times in the future 
+						    trainTime < (currentCal.getTimeInMillis() + (60 * 60 * 1000)) &&  // Only one hour into the future.
+						    trainTime > maxStartTime) {  // Only items that haven't already been imported.
+							routeDataHelper.insert(route.name(), trainTime);
+						}
 					}
 				}
 			}
 			
-			currentDay.add(Calendar.DAY_OF_YEAR, 1);
+			currentCal.add(Calendar.HOUR, 1);
 		}
+		
+		routeDataHelper.close();
 	}
 }

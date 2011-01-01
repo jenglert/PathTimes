@@ -1,6 +1,7 @@
 package jre.bus;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,18 +25,24 @@ public class StopSelection extends Activity implements OnClickListener {
 		
 		setContentView(R.layout.stop_selection);
 		
+		RouteDataHelper dataHelper = new RouteDataHelper(getApplicationContext());
+		
 		LinearLayout linearLayout = (LinearLayout) findViewById(R.id.stopSelectionLayout);
 		
 		Map<String, StationForList> stations = new HashMap<String, StationForList>();
 		for (Route route: Route.values()) {
-			if (route.getDirection().equals(direction)) {
-				for (Station station : route.getStations()) {
-					StationForList stationForList  = new StationForList(station, direction);
-					stations.put(stationForList.getKey(), stationForList);
+			if (dataHelper.hasAvailableTime(new Date(), route)) {
+				if (route.getDirection().equals(direction)) {
+					for (int i = 0; i < route.getStations().length - 1; i ++) {
+						Station station = route.getStations()[i];
+						StationForList stationForList  = new StationForList(station, direction);
+						stations.put(stationForList.getKey(), stationForList);
+					}
 				}
-				
 			}
 		}
+		
+		dataHelper.close();
 		
 		StationForList[] stationsArray = stations.values().toArray(new StationForList[stations.size()]);
 		Arrays.sort(stationsArray);

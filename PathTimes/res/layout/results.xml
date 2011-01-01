@@ -13,10 +13,9 @@
             android:textSize="35px" android:textColor="@color/blue"></TextView>
     </TableRow>
     <TableRow>
-        <ListView android:id="@android:id/list" android:layout_width="fill_parent" 
-            android:layout_height="wrap_content" android:dividerHeight="0px" 
-            android:divider="#FFF"
-            android:layout_gravity="center_horizontal"></ListView>
+        <TextView android:id="@+id/resultsText" 
+                  android:textSize="22dip" >
+        </TextView>
     </TableRow>
     <TableRow android:layout_gravity="center_horizontal"> 
         <Button android:id="@+id/moreInfo" android:layout_width="fill_parent" 
