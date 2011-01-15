@@ -1,6 +1,7 @@
 package jre.bus;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -27,6 +28,10 @@ public class ResultsActivity extends Activity {
 		TrainDirection direction = (TrainDirection) intent.getExtras().get("direction");
 		
 		RouteDataHelper helper = new RouteDataHelper(getApplicationContext());
+		
+		// Ensure that the proper busses are loaded.
+		new RouteDataLoader(getApplicationContext()).loadUpcomingDays(Calendar.getInstance(), 5, false);
+		
 		List<Snake<Long, String>> nextFiveBuses = helper.nextFiveBuses(new Date(), station, direction);
 		helper.close();
 		

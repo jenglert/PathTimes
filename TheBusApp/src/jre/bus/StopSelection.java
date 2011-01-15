@@ -1,6 +1,7 @@
 package jre.bus;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,6 +25,9 @@ public class StopSelection extends Activity implements OnClickListener {
 		direction = TrainDirection.findById((Integer) getIntent().getExtras().get("direction"));
 		
 		setContentView(R.layout.stop_selection);
+		
+		// Ensure that the proper busses are loaded.
+		new RouteDataLoader(getApplicationContext()).loadUpcomingDays(Calendar.getInstance(), 5, false);
 		
 		RouteDataHelper dataHelper = new RouteDataHelper(getApplicationContext());
 		

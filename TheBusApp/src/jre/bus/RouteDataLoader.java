@@ -13,7 +13,11 @@ public class RouteDataLoader {
 		 routeDataHelper = new RouteDataHelper(context);
 	}
 	
-	public void loadUpcomingDays(Calendar startDate, int hours) {
+	public void loadUpcomingDays(Calendar startDate, int hours, boolean deletePrevious) {
+		
+		if (deletePrevious) {
+			routeDataHelper.deleteAll();
+		}
 		
 		Calendar currentCal = Calendar.getInstance();
 		currentCal.setTimeZone(TimeZone.getTimeZone("EST"));

@@ -31,7 +31,7 @@ public class RouteDataHelperTest extends AndroidTestCase {
 		assertEquals(Calendar.THURSDAY, startTime.get(Calendar.DAY_OF_WEEK));
 		
 		RouteDataLoader loader = new RouteDataLoader(getContext());
-		loader.loadUpcomingDays(startTime, 48);
+		loader.loadUpcomingDays(startTime, 48, true);
 		
 		RouteDataHelper routeDataHelper = new RouteDataHelper(getContext());
 		
@@ -87,7 +87,7 @@ public class RouteDataHelperTest extends AndroidTestCase {
 		assertEquals(Calendar.SUNDAY, startTime.get(Calendar.DAY_OF_WEEK));
 		
 		RouteDataLoader loader = new RouteDataLoader(getContext());
-		loader.loadUpcomingDays(startTime, 48);
+		loader.loadUpcomingDays(startTime, 48, true);
 		
 		RouteDataHelper routeDataHelper = new RouteDataHelper(getContext());
 		
@@ -126,6 +126,114 @@ public class RouteDataHelperTest extends AndroidTestCase {
 		assertEquals(19, three.get(Calendar.HOUR_OF_DAY));
 		assertEquals(30, three.get(Calendar.MINUTE));
 	}
+	
+	public void testNextFiveBuses_SATURDAYNIGHT() {
+		// Sat Jan 08 2011 17:12:40 GMT-0500 (EST)
+		Calendar startTime = Calendar.getInstance();
+		startTime.setTimeZone(TimeZone.getTimeZone("EST"));
+		startTime.setTimeInMillis(1294524760000L);
+		
+		// Sanity
+		assertEquals(17, startTime.get(Calendar.HOUR_OF_DAY));
+		assertEquals(12, startTime.get(Calendar.MINUTE));
+		assertEquals(2011, startTime.get(Calendar.YEAR));
+		
+		assertEquals(Calendar.SATURDAY, startTime.get(Calendar.DAY_OF_WEEK));
+		
+		RouteDataLoader loader = new RouteDataLoader(getContext());
+		loader.loadUpcomingDays(startTime, 48, true);
+		
+		RouteDataHelper routeDataHelper = new RouteDataHelper(getContext());
+		
+		assertTrue(routeDataHelper.selectAll().size() > 10);
+		for (Map<String, Object> row : routeDataHelper.selectAll()) {
+			Log.e("msg",
+					"Route: "
+							+ row.get("route")
+							+ " start_time: "
+							+ new SimpleDateFormat(
+									"yyyy.MM.dd G 'at' HH:mm:ss z")
+									.format(new Date((Long) row
+											.get("start_time"))) + " time: " + row.get("start_time"));
+		}
+		
+		List<Snake<Long, String>> nextFiveBuses = new ArrayList<Snake<Long, String>>(
+				routeDataHelper.nextFiveBuses(startTime.getTime(),
+						Station.HOBOKENTERMINAL, TrainDirection.TO_NYC));
+	
+		assertEquals(5, nextFiveBuses.size());
+		Calendar one = Calendar.getInstance();
+		one.setTimeInMillis(nextFiveBuses.get(0).getFirst());
+		one.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(17, one.get(Calendar.HOUR_OF_DAY));
+		assertEquals(30, one.get(Calendar.MINUTE));
+		
+		Calendar two = Calendar.getInstance();
+		two.setTimeInMillis(nextFiveBuses.get(1).getFirst());
+		two.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(17, two.get(Calendar.HOUR_OF_DAY));
+		assertEquals(50, two.get(Calendar.MINUTE));
+		
+		Calendar three = Calendar.getInstance();
+		three.setTimeInMillis(nextFiveBuses.get(2).getFirst());
+		three.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(18, three.get(Calendar.HOUR_OF_DAY));
+		assertEquals(10, three.get(Calendar.MINUTE));
+	}
+	
+	public void testNextFiveBuses_SATURDAYNIGHT_2() {
+		// Sat Jan 15 2011 20:38:34 GMT-0500 (EST)
+		Calendar startTime = Calendar.getInstance();
+		startTime.setTimeZone(TimeZone.getTimeZone("EST"));
+		startTime.setTimeInMillis(1295141914000L);
+		
+		// Sanity
+		assertEquals(20, startTime.get(Calendar.HOUR_OF_DAY));
+		assertEquals(38, startTime.get(Calendar.MINUTE));
+		assertEquals(2011, startTime.get(Calendar.YEAR));
+		
+		assertEquals(Calendar.SATURDAY, startTime.get(Calendar.DAY_OF_WEEK));
+		
+		RouteDataLoader loader = new RouteDataLoader(getContext());
+		loader.loadUpcomingDays(startTime, 48, true);
+		
+		RouteDataHelper routeDataHelper = new RouteDataHelper(getContext());
+		
+		assertTrue(routeDataHelper.selectAll().size() > 10);
+		for (Map<String, Object> row : routeDataHelper.selectAll()) {
+			Log.e("msg",
+					"Route: "
+							+ row.get("route")
+							+ " start_time: "
+							+ new SimpleDateFormat(
+									"yyyy.MM.dd G 'at' HH:mm:ss z")
+									.format(new Date((Long) row
+											.get("start_time"))) + " time: " + row.get("start_time"));
+		}
+		
+		List<Snake<Long, String>> nextFiveBuses = new ArrayList<Snake<Long, String>>(
+				routeDataHelper.nextFiveBuses(startTime.getTime(),
+						Station.PABT, TrainDirection.FROM_NYC));
+	
+		assertEquals(5, nextFiveBuses.size());
+		Calendar one = Calendar.getInstance();
+		one.setTimeInMillis(nextFiveBuses.get(0).getFirst());
+		one.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(20, one.get(Calendar.HOUR_OF_DAY));
+		assertEquals(55, one.get(Calendar.MINUTE));
+		
+		Calendar two = Calendar.getInstance();
+		two.setTimeInMillis(nextFiveBuses.get(1).getFirst());
+		two.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(21, two.get(Calendar.HOUR_OF_DAY));
+		assertEquals(15, two.get(Calendar.MINUTE));
+		
+		Calendar three = Calendar.getInstance();
+		three.setTimeInMillis(nextFiveBuses.get(2).getFirst());
+		three.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(21, three.get(Calendar.HOUR_OF_DAY));
+		assertEquals(35, three.get(Calendar.MINUTE));
+	}
 
 	public void testHasAvailableTime() {
 		// SUNDAY, December 26rd, 6:21PM 2010
@@ -141,7 +249,7 @@ public class RouteDataHelperTest extends AndroidTestCase {
 		assertEquals(Calendar.SUNDAY, startTime.get(Calendar.DAY_OF_WEEK));
 		
 		RouteDataLoader loader = new RouteDataLoader(getContext());
-		loader.loadUpcomingDays(startTime, 48);
+		loader.loadUpcomingDays(startTime, 48, true);
 		
 		RouteDataHelper routeDataHelper = new RouteDataHelper(getContext());
 		
@@ -175,7 +283,7 @@ public class RouteDataHelperTest extends AndroidTestCase {
 		assertEquals(Calendar.SUNDAY, startTime.get(Calendar.DAY_OF_WEEK));
 		
 		RouteDataLoader loader = new RouteDataLoader(getContext());
-		loader.loadUpcomingDays(startTime, 48);
+		loader.loadUpcomingDays(startTime, 48, true);
 		
 		assertEquals(1293578400000L, new RouteDataHelper(getContext()).getMaxStartTime());
 	}

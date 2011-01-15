@@ -14,7 +14,7 @@
               android:paddingBottom="20dip"
               />
     
-    <Button android:text="From NYC"
+    <Button android:text="To NJ"
             android:gravity="center"
             android:textSize="30dip"
             android:onClick="selectFromNYC"

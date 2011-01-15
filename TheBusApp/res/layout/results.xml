@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:background="@color/background_gray">
     
-    <TextView android:text="Next Train Times"
+    <TextView android:text="Next Bus Times"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content" 
               android:textSize="30dip"

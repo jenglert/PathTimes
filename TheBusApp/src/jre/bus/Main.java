@@ -15,7 +15,7 @@ public class Main extends Activity {
         setContentView(R.layout.main);
         
         // Create all the train times for the next 5 hours.
-        new RouteDataLoader(getApplicationContext()).loadUpcomingDays(Calendar.getInstance(), 5);
+        new RouteDataLoader(getApplicationContext()).loadUpcomingDays(Calendar.getInstance(), 5, false);
     }
     
     public void selectFromNYC(View theButton) {

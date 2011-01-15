@@ -1,5 +1,6 @@
 package jre.pathtimes;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -86,8 +87,16 @@ public class Results extends Activity {
 			
 			results.append(Html.fromHtml("<b>"
 					+ format.format(arrivalTime.getTime())
-					+ " </b><small> (in " + minutes + ":" + seconds
+					+ " </b>"));
+			
+			if (minutes > 0) {
+				results.append(Html.fromHtml("<small> (in " + minutes + ":" + new DecimalFormat("00").format(seconds)
 					+ " minutes)</small><br />"));
+			}
+			else {
+				results.append(Html.fromHtml("<small> (in " + seconds
+						+ "  seconds)</small><br />"));
+			}
 		}
 		
 		resultsText.setText(results.toString());
