@@ -234,6 +234,138 @@ public class RouteDataHelperTest extends AndroidTestCase {
 		assertEquals(21, three.get(Calendar.HOUR_OF_DAY));
 		assertEquals(35, three.get(Calendar.MINUTE));
 	}
+	
+	public void testNextFiveBuses_SATURDAYNIGHT_3() {
+		// Sat Jan 15 2011 21:27:58 GMT-0500 (EST)
+		Calendar startTime = Calendar.getInstance();
+		startTime.setTimeZone(TimeZone.getTimeZone("EST"));
+		startTime.setTimeInMillis(1295144878000L);
+		
+		// Sanity
+		assertEquals(21, startTime.get(Calendar.HOUR_OF_DAY));
+		assertEquals(27, startTime.get(Calendar.MINUTE));
+		assertEquals(2011, startTime.get(Calendar.YEAR));
+		
+		assertEquals(Calendar.SATURDAY, startTime.get(Calendar.DAY_OF_WEEK));
+		
+		RouteDataLoader loader = new RouteDataLoader(getContext());
+		loader.loadUpcomingDays(startTime, 48, true);
+		
+		RouteDataHelper routeDataHelper = new RouteDataHelper(getContext());
+		
+		assertTrue(routeDataHelper.selectAll().size() > 10);
+		for (Map<String, Object> row : routeDataHelper.selectAll()) {
+			Log.e("msg",
+					"Route: "
+							+ row.get("route")
+							+ " start_time: "
+							+ new SimpleDateFormat(
+									"yyyy.MM.dd G 'at' HH:mm:ss z")
+									.format(new Date((Long) row
+											.get("start_time"))) + " time: " + row.get("start_time"));
+		}
+		
+		List<Snake<Long, String>> nextFiveBuses = new ArrayList<Snake<Long, String>>(
+				routeDataHelper.nextFiveBuses(startTime.getTime(),
+						Station.PABT, TrainDirection.FROM_NYC));
+	
+		assertEquals(5, nextFiveBuses.size());
+		Calendar one = Calendar.getInstance();
+		one.setTimeInMillis(nextFiveBuses.get(0).getFirst());
+		one.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(21, one.get(Calendar.HOUR_OF_DAY));
+		assertEquals(35, one.get(Calendar.MINUTE));
+		
+		Calendar two = Calendar.getInstance();
+		two.setTimeInMillis(nextFiveBuses.get(1).getFirst());
+		two.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(21, two.get(Calendar.HOUR_OF_DAY));
+		assertEquals(55, two.get(Calendar.MINUTE));
+		
+		Calendar three = Calendar.getInstance();
+		three.setTimeInMillis(nextFiveBuses.get(2).getFirst());
+		three.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(22, three.get(Calendar.HOUR_OF_DAY));
+		assertEquals(15, three.get(Calendar.MINUTE));
+		
+		Calendar four = Calendar.getInstance();
+		four.setTimeInMillis(nextFiveBuses.get(3).getFirst());
+		four.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(22, four.get(Calendar.HOUR_OF_DAY));
+		assertEquals(35, four.get(Calendar.MINUTE));
+		
+		Calendar five = Calendar.getInstance();
+		five.setTimeInMillis(nextFiveBuses.get(4).getFirst());
+		five.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(22, five.get(Calendar.HOUR_OF_DAY));
+		assertEquals(55, five.get(Calendar.MINUTE));
+	}
+	
+	public void testNextFiveBuses_WEDNESDAY_NIGHT() {
+		// Tue Jan 18 22:55:57 2011
+		Calendar startTime = Calendar.getInstance();
+		startTime.setTimeZone(TimeZone.getTimeZone("EST"));
+		startTime.setTimeInMillis(1295409357000L);
+		
+		// Sanity
+		assertEquals(22, startTime.get(Calendar.HOUR_OF_DAY));
+		assertEquals(55, startTime.get(Calendar.MINUTE));
+		assertEquals(2011, startTime.get(Calendar.YEAR));
+		
+		assertEquals(Calendar.TUESDAY, startTime.get(Calendar.DAY_OF_WEEK));
+		
+		RouteDataLoader loader = new RouteDataLoader(getContext());
+		loader.loadUpcomingDays(startTime, 5, true);
+		
+		RouteDataHelper routeDataHelper = new RouteDataHelper(getContext());
+		
+		assertTrue(routeDataHelper.selectAll().size() > 10);
+		for (Map<String, Object> row : routeDataHelper.selectAll()) {
+			Log.e("msg",
+					"Route: "
+							+ row.get("route")
+							+ " start_time: "
+							+ new SimpleDateFormat(
+									"yyyy.MM.dd G 'at' HH:mm:ss z")
+									.format(new Date((Long) row
+											.get("start_time"))) + " time: " + row.get("start_time"));
+		}
+		
+		List<Snake<Long, String>> nextFiveBuses = new ArrayList<Snake<Long, String>>(
+				routeDataHelper.nextFiveBuses(startTime.getTime(),
+						Station.HOBOKENTERMINAL, TrainDirection.FROM_NYC));
+	
+		assertEquals(5, nextFiveBuses.size());
+		Calendar one = Calendar.getInstance();
+		one.setTimeInMillis(nextFiveBuses.get(0).getFirst());
+		one.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(23, one.get(Calendar.HOUR_OF_DAY));
+		assertEquals(00, one.get(Calendar.MINUTE));
+		
+		Calendar two = Calendar.getInstance();
+		two.setTimeInMillis(nextFiveBuses.get(1).getFirst());
+		two.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(23, two.get(Calendar.HOUR_OF_DAY));
+		assertEquals(15, two.get(Calendar.MINUTE));
+		
+		Calendar three = Calendar.getInstance();
+		three.setTimeInMillis(nextFiveBuses.get(2).getFirst());
+		three.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(23, three.get(Calendar.HOUR_OF_DAY));
+		assertEquals(30, three.get(Calendar.MINUTE));
+		
+		Calendar four = Calendar.getInstance();
+		four.setTimeInMillis(nextFiveBuses.get(3).getFirst());
+		four.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(23, four.get(Calendar.HOUR_OF_DAY));
+		assertEquals(45, four.get(Calendar.MINUTE));
+		
+		Calendar five = Calendar.getInstance();
+		five.setTimeInMillis(nextFiveBuses.get(4).getFirst());
+		five.setTimeZone(TimeZone.getTimeZone("EST"));
+		assertEquals(0, five.get(Calendar.HOUR_OF_DAY));
+		assertEquals(0, five.get(Calendar.MINUTE));
+	}
 
 	public void testHasAvailableTime() {
 		// SUNDAY, December 26rd, 6:21PM 2010

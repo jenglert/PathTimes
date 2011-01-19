@@ -113,6 +113,11 @@ public enum Route {
 			Station.FOURTEENTHANDWILLOW, Station.ELEVENTHANDWILLOW,
 			Station.FIFTHANDWILLOW, Station.FIRSTANDWILLOW, Station.HOBOKENTERMINAL
 		}, TrainDirection.FROM_NYC, Day.WEEKDAY, new int[] { 2, 2, 3, 3}),
+		
+    WEEKDAY_WASHINGTON_ST_TO_JC(new Integer[] { 2220, 2315}, new Station[]  {
+		Station.PABT, Station.FOURTEENTHANDWASHINGTON, Station.ELEVENTHANDWASHINGTON, 
+		Station.FIFTHANDWASHINGTON, Station.FIRSTANDWASHINGTON, Station.HOBOKENTERMINAL, Station.HAMILTONPARK
+	}, TrainDirection.FROM_NYC, Day.WEEKDAY, new int[] {12, 2, 2, 2, 3, 10}),
 
 	WEEKDAY_WASHINGTON_ST_TO_NJ(new Integer[] { 00, 30, 55, 130,
 			200, 535, 605, 630, 640, 650, 700, 710, 715, 720, 730, 734, 736,
