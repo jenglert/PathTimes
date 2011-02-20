@@ -86,7 +86,7 @@ public enum TrainLine {
 					"06:59 PM", "07:09 PM", "07:19 PM", "07:29 PM", "07:40 PM",
 					"08:00 PM", "08:20 PM", "08:40 PM", "09:00 PM", "09:20 PM",
 					"09:40 PM", "10:00 PM", "10:20 PM", "10:40 PM", "11:00 PM",
-					"11:20 PM", "11:45 AM", "12:15 AM" }, new int[] { 2, 1, 1,
+					"11:20 PM", "11:45 PM" }, new int[] { 2, 1, 1,
 					2, 11, 3, 3, 4 }, ScheduleDay.SundayHoliday), 
 					
 					
@@ -239,7 +239,7 @@ public enum TrainLine {
 					"08:10 PM", "08:30 PM", "08:50 PM", "09:10 PM", "09:30 PM",
 					"09:50 PM", "10:10 PM", "10:30 PM", "10:50 PM", "11:15 PM",
 					"11:45 PM", "12:00 AM" }, new int[] { 4, 3, 6, 8, 2, 1,
-					-24, 27 }, ScheduleDay.SundayHoliday),
+					1, 2 }, ScheduleDay.SundayHoliday),
 					
 	JSQ_TTRD_WEEKDAY(
 			new Station[] { Station.JournalSquare, Station.GroveSt,
