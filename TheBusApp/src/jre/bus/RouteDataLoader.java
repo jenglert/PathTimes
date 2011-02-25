@@ -33,13 +33,11 @@ public class RouteDataLoader {
 		
 		for (int i = 0; i < hours; i++) {
 			long beginningOfDay = DateUtil.beginningOfDay(currentCal).getTimeInMillis();
-			Log.e("jim", "Current time:" + new SimpleDateFormat().format(currentCal.getTime()) + " beg: " + new SimpleDateFormat().format(beginningOfDay));
 			
 			for (Route route : Route.values()) {
 				if (route.getDay().matches(currentCal)) {
 					for (long date : route.getStartTimesAsMillisecondsSinceBeginningOfDay()) {
 						long trainTime = beginningOfDay + date;
-						Log.e("train time", new SimpleDateFormat().format(new Date(trainTime)));
 						if (trainTime >= currentCal.getTimeInMillis() &&  // Only times in the future 
 						    trainTime <= (currentCal.getTimeInMillis() + (60 * 60 * 1000)) &&  // Only one hour into the future.
 						    trainTime > maxStartTime) {  // Only items that haven't already been imported.
