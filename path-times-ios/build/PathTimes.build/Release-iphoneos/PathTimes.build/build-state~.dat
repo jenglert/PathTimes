@@ -1,0 +1,788 @@
+TPathTimes
+v7
+r0
+t318908282.875511
+cCheck dependencies
+cCpResource build/Release-iphoneos/PathTimes.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/Info.plist PathTimes-Info.plist
+cCompileXIB /Users/jimenglert/Documents/PathTimes/MainWindow.xib
+cCompileXIB /Users/jimenglert/Documents/PathTimes/PathTimesViewController.xib
+cCopyPNGFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/background.png background.png
+cCopyPNGFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/icon.png icon.png
+cCompileXIB /Users/jimenglert/Documents/PathTimes/ResultsViewController.xib
+cProcessPCH /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch.gch PathTimes_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch.gch PathTimes_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/main.o /Users/jimenglert/Documents/PathTimes/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesAppDelegate.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesViewController.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/Station.o /Users/jimenglert/Documents/PathTimes/Classes/Station.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/TrainLine.o /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleDay.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ResultsViewController.o /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleUtil.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/main.o /Users/jimenglert/Documents/PathTimes/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesAppDelegate.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesViewController.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/Station.o /Users/jimenglert/Documents/PathTimes/Classes/Station.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/TrainLine.o /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes normal armv6
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleDay.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ResultsViewController.o /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleUtil.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes normal armv7
+cCreateUniversalBinary /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes normal "armv6 armv7"
+cGenerateDSYMFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app.dSYM /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes
+cProcessProductPackaging "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/5735C732-CBCB-4BF5-89A4-6799F8F3A1EF.mobileprovision" /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+cTouch /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent
+cCodeSign /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+cValidate /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
+c000000004CC7DC9E0000000000000110
+t1288166558
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+c000000004CB3DFCF00000000000001A7
+t1286856655
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+c000000004CB3DFCF00000000000001E5
+t1286856655
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC10EF500000000003532B0
+t1287720693
+s3486384
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC10F4700000000003E1F20
+t1287720775
+s4071200
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC10F1C0000000000001466
+t1287720732
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC11AE60000000000000AA1
+t1287723750
+s2721
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC11B750000000000C769F0
+t1287723893
+s13068784
+
+N/Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.h
+c000000004D3520C700000000000001FB
+t1295327431
+s507
+i<UIKit/UIKit.h>
+
+N/Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m
+c000000004D50990A0000000000000A9D
+t1297127690
+s2717
+i"PathTimesAppDelegate.h"
+i"PathTimesViewController.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.h
+c000000004D45BABB0000000000000451
+t1296415419
+s1105
+i<UIKit/UIKit.h>
+i"Station.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m
+c000000004D5099380000000000000CEE
+t1297127736
+s3310
+i"PathTimesViewController.h"
+i"Station.h"
+i"ResultsViewController.h"
+i"ScheduleUtil.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.h
+c000000004D4F21C800000000000002DE
+t1297031624
+s734
+i<UIKit/UIKit.h>
+i"Station.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m
+c000000004D509B8500000000000007A0
+t1297128325
+s1952
+i"ResultsViewController.h"
+i"PathTimesViewController.h"
+i"ScheduleDay.h"
+i"ScheduleUtil.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.h
+c000000004D5091ED0000000000000213
+t1297125869
+s531
+
+N/Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m
+c000000004D509BD70000000000000549
+t1297128407
+s1353
+i"ScheduleDay.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.h
+c000000004D48D2F900000000000002E0
+t1296618233
+s736
+i<Foundation/Foundation.h>
+i"Station.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m
+c000000004D509D1B000000000000100A
+t1297128731
+s4106
+i"ScheduleUtil.h"
+i"TrainLine.h"
+i"ScheduleDay.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/Station.h
+c000000004D4E0995000000000000047E
+t1296959893
+s1150
+
+N/Users/jimenglert/Documents/PathTimes/Classes/Station.m
+c000000004D4E09AE0000000000001304
+t1296959918
+s4868
+i"Station.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/TrainLine.h
+c000000004D4FFA53000000000000068B
+t1297087059
+s1675
+i"ScheduleDay.h"
+i"Station.h"
+
+N/Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m
+c000000004D509AA4000000000000AC1D
+t1297128100
+s44061
+i"TrainLine.h"
+i"Station.h"
+i"ScheduleUtil.h"
+
+N/Users/jimenglert/Documents/PathTimes/MainWindow.xib
+c000000004D2BD78E0000000000004E41
+t1294718862
+s20033
+
+N/Users/jimenglert/Documents/PathTimes/PathTimesViewController.xib
+c000000004D45B7F9000000000000BD2E
+t1296414713
+s48430
+
+N/Users/jimenglert/Documents/PathTimes/PathTimes_Prefix.pch
+c000000004D2BD78E00000000000000BB
+t1294718862
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/jimenglert/Documents/PathTimes/ResultsViewController.xib
+c000000004D4FF647000000000000834C
+t1297086023
+s33612
+
+N/Users/jimenglert/Documents/PathTimes/background.png
+c000000004D3252640000000000012663
+t1295143524
+s75363
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes
+t1297215481
+s109036
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes.LinkFileList
+c000000004D51EFF10000000000000413
+t1297215473
+s1043
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesAppDelegate.o
+t1297215477
+s50452
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesViewController.o
+t1297215477
+s50844
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ResultsViewController.o
+t1297215478
+s47028
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleDay.o
+t1297215478
+s13792
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleUtil.o
+t1297215478
+s16288
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/Station.o
+t1297215478
+s23828
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/TrainLine.o
+t1297215481
+s135856
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/main.o
+t1297215477
+s6508
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes
+t1297215482
+s113080
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes.LinkFileList
+c000000004D51EFF10000000000000413
+t1297215473
+s1043
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesAppDelegate.o
+t1297215478
+s50464
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesViewController.o
+t1297215478
+s50860
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ResultsViewController.o
+t1297215481
+s47080
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleDay.o
+t1297215481
+s13796
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleUtil.o
+t1297215481
+s16096
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/Station.o
+t1297215479
+s23540
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/TrainLine.o
+t1297215482
+s138384
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/main.o
+t1297215478
+s6488
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent
+t1297215482
+s443
+
+N/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/com.apple.build-tools.platform.validate
+t2
+s0
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+t1297215482
+s476
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app.dSYM
+t1297215482
+s102
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/Info.plist
+t1297215473
+s832
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/MainWindow.nib
+t1297215475
+s1127
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes
+t1297215482
+s227768
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimesViewController.nib
+t1297215475
+s4541
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PkgInfo
+t1297215473
+s8
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/ResourceRules.plist
+t1297215473
+s485
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/ResultsViewController.nib
+t1297215476
+s2844
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/background.png
+t1297215475
+s87550
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+t1297215482
+s7051
+
+N/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/icon.png
+t1297215475
+s2192
+
+N/Users/jimenglert/Documents/PathTimes/icon.png
+c000000004D50B617000000000000081D
+t1297135127
+s2077
+
+N/Users/jimenglert/Documents/PathTimes/main.m
+c000000004D2BD78E000000000000016A
+t1294718862
+s362
+i<UIKit/UIKit.h>
+
+N/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/1872E848-8C30-424F-B6C3-9D18AF615143.mobileprovision
+c000000004D4FF2D40000000000001C0A
+t1297085140
+s7178
+
+N/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/5735C732-CBCB-4BF5-89A4-6799F8F3A1EF.mobileprovision
+c000000004D50C50F0000000000001B8B
+t1297138959
+s7051
+
+N/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/9C113105-691C-4CC8-9B1F-66056F2F4487.mobileprovision
+c000000004D4FF4230000000000001BF2
+t1297085475
+s7154
+
+N/var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch.gch
+t1297215477
+s10249944
+
+N/var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch.gch
+t1297215477
+s9783000
+
+NPathTimes-Info.plist
+c000000004D50C62B00000000000003C0
+t1297139243
+s960
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies318908273#318908273#0(0"0(0#1#0"8610275936#0"0#
+
+CCodeSign /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+s318908282.441174
+e318908282.705590
+r1
+xCodeSign
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+lSLF07#2@45"CodeSign build/Release-iphoneos/PathTimes.app318908282#318908282#0(0"0(0#0#74"/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app8613425792#651"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Distribution: James Englert" --resource-rules=/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/ResourceRules.plist --entitlements /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesAppDelegate.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908277.646329
+e318908277.790746
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesAppDelegate.o
+x/Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m318908277#318908277#0(0"0(0#0#68"/Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m8590222336#1835"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesAppDelegate.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesViewController.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908277.721176
+e318908277.932436
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesViewController.o
+x/Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m318908277#318908277#0(0"0(0#0#71"/Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m8611757312#1841"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimesViewController.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ResultsViewController.o /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908278.275375
+e318908278.427687
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ResultsViewController.o
+x/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m: In function '-[ResultsViewController viewDidLoad]':
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: 'NSDate' may not respond to '-descriptionWithCalendarFormat:timeZone:locale:'
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: (Messages without a matching method signature
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: will be assumed to return 'id' and accept
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: '...' as arguments.)
+lSLF07#2@77"Compile /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m318908278#318908278#0(642"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m: In function '-[ResultsViewController viewDidLoad]':/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: 'NSDate' may not respond to '-descriptionWithCalendarFormat:timeZone:locale:'/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: (Messages without a matching method signature/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: will be assumed to return 'id' and accept/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: '...' as arguments.)2(22@77"'NSDate' may not respond to '-descriptionWithCalendarFormat:timeZone:locale:'318908278#123#161#0(6@69"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m318821125#51#0#51#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)318908278#284#129#0(6@69"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m318821125#51#0#51#0#0"0(0#0#69"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m8610271968#1837"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ResultsViewController.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleDay.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908278.140163
+e318908278.275252
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleDay.o
+x/Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m318908278#318908278#0(0"0(0#0#59"/Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m8613144928#1817"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleDay.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleUtil.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908278.427805
+e318908278.592027
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleUtil.o
+x/Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m318908278#318908278#0(0"0(0#0#60"/Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m8608585632#1819"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/ScheduleUtil.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/Station.o /Users/jimenglert/Documents/PathTimes/Classes/Station.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908277.790865
+e318908278.140047
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/Station.o
+x/Users/jimenglert/Documents/PathTimes/Classes/Station.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/jimenglert/Documents/PathTimes/Classes/Station.m318908277#318908278#0(0"0(0#0#55"/Users/jimenglert/Documents/PathTimes/Classes/Station.m8610131744#1809"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/Station.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/Station.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/TrainLine.o /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908277.932546
+e318908281.085233
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/TrainLine.o
+x/Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m318908277#318908281#0(0"0(0#0#57"/Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m8606904352#1813"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/TrainLine.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/main.o /Users/jimenglert/Documents/PathTimes/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908277.645033
+e318908277.721056
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/main.o
+x/Users/jimenglert/Documents/PathTimes/main.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@52"Compile /Users/jimenglert/Documents/PathTimes/main.m318908277#318908277#0(0"0(0#0#44"/Users/jimenglert/Documents/PathTimes/main.m8606458848#1795"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/main.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/main.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesAppDelegate.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908278.668530
+e318908278.789980
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesAppDelegate.o
+x/Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m318908278#318908278#0(0"0(0#0#68"/Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m8608468256#1835"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/PathTimesAppDelegate.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesAppDelegate.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesViewController.o /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908278.790123
+e318908278.989701
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesViewController.o
+x/Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m318908278#318908278#0(0"0(0#0#71"/Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m8608092128#1841"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/PathTimesViewController.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimesViewController.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ResultsViewController.o /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908281.313610
+e318908281.499287
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ResultsViewController.o
+x/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m: In function '-[ResultsViewController viewDidLoad]':
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: 'NSDate' may not respond to '-descriptionWithCalendarFormat:timeZone:locale:'
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: (Messages without a matching method signature
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: will be assumed to return 'id' and accept
+o/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: '...' as arguments.)
+lSLF07#2@77"Compile /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m318908281#318908281#0(642"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m: In function '-[ResultsViewController viewDidLoad]':/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: 'NSDate' may not respond to '-descriptionWithCalendarFormat:timeZone:locale:'/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: (Messages without a matching method signature/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: will be assumed to return 'id' and accept/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m:51: warning: '...' as arguments.)2(22@77"'NSDate' may not respond to '-descriptionWithCalendarFormat:timeZone:locale:'318908281#123#161#0(6@69"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m318821125#51#0#51#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)318908281#284#129#0(6@69"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m318821125#51#0#51#0#0"0(0#0#69"/Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m8610056256#1837"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/ResultsViewController.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ResultsViewController.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleDay.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908281.164649
+e318908281.313497
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleDay.o
+x/Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m318908281#318908281#0(0"0(0#0#59"/Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m8613421344#1817"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/ScheduleDay.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleDay.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleUtil.o /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908281.499398
+e318908281.650170
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleUtil.o
+x/Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m318908281#318908281#0(0"0(0#0#60"/Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m8611582848#1819"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/ScheduleUtil.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/ScheduleUtil.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/Station.o /Users/jimenglert/Documents/PathTimes/Classes/Station.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908278.989814
+e318908279.308802
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/Station.o
+x/Users/jimenglert/Documents/PathTimes/Classes/Station.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/jimenglert/Documents/PathTimes/Classes/Station.m318908278#318908279#0(0"0(0#0#55"/Users/jimenglert/Documents/PathTimes/Classes/Station.m8613204320#1809"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/Station.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/Station.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/TrainLine.o /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908279.309012
+e318908282.314494
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/TrainLine.o
+x/Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@65"Compile /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m318908279#318908282#0(0"0(0#0#57"/Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m8610062560#1813"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/Classes/TrainLine.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/TrainLine.o0#
+
+CCompileC build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/main.o /Users/jimenglert/Documents/PathTimes/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908278.592151
+e318908278.668415
+r1
+xCompileC
+xbuild/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/main.o
+x/Users/jimenglert/Documents/PathTimes/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@52"Compile /Users/jimenglert/Documents/PathTimes/main.m318908278#318908278#0(0"0(0#0#44"/Users/jimenglert/Documents/PathTimes/main.m8611083840#1795"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch -c /Users/jimenglert/Documents/PathTimes/main.m -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/main.o0#
+
+CCompileXIB /Users/jimenglert/Documents/PathTimes/MainWindow.xib
+s318908273.340455
+e318908275.175833
+r1
+xCompileXIB
+x/Users/jimenglert/Documents/PathTimes/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib318908273#318908275#0(0"0(0#0#52"/Users/jimenglert/Documents/PathTimes/MainWindow.xib8610391648#543"    cd /Users/jimenglert/Documents/PathTimes    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/MainWindow.nib /Users/jimenglert/Documents/PathTimes/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/jimenglert/Documents/PathTimes/PathTimesViewController.xib
+s318908273.341244
+e318908275.811589
+r1
+xCompileXIB
+x/Users/jimenglert/Documents/PathTimes/PathTimesViewController.xib
+lSLF07#2@38"CompileXIB PathTimesViewController.xib318908273#318908275#0(0"0(0#0#65"/Users/jimenglert/Documents/PathTimes/PathTimesViewController.xib8610060352#569"    cd /Users/jimenglert/Documents/PathTimes    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimesViewController.nib /Users/jimenglert/Documents/PathTimes/PathTimesViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/jimenglert/Documents/PathTimes/ResultsViewController.xib
+s318908275.848106
+e318908276.380040
+r1
+xCompileXIB
+x/Users/jimenglert/Documents/PathTimes/ResultsViewController.xib
+lSLF07#2@36"CompileXIB ResultsViewController.xib318908275#318908276#0(0"0(0#0#63"/Users/jimenglert/Documents/PathTimes/ResultsViewController.xib8608601664#565"    cd /Users/jimenglert/Documents/PathTimes    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/ResultsViewController.nib /Users/jimenglert/Documents/PathTimes/ResultsViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCopyPNGFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/background.png background.png
+s318908275.175981
+e318908275.993991
+r1
+xCopyPNGFile
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/background.png
+xbackground.png
+lSLF07#2@78"CopyPNGFile build/Release-iphoneos/PathTimes.app/background.png background.png318908275#318908275#0(0"0(0#0#52"/Users/jimenglert/Documents/PathTimes/background.png8607882560#569"    cd /Users/jimenglert/Documents/PathTimes    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/jimenglert/Documents/PathTimes/background.png /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/background.png0#
+
+CCopyPNGFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/icon.png icon.png
+s318908275.811724
+e318908275.847992
+r1
+xCopyPNGFile
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/icon.png
+xicon.png
+lSLF07#2@66"CopyPNGFile build/Release-iphoneos/PathTimes.app/icon.png icon.png318908275#318908275#0(0"0(0#0#46"/Users/jimenglert/Documents/PathTimes/icon.png8611126432#557"    cd /Users/jimenglert/Documents/PathTimes    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/jimenglert/Documents/PathTimes/icon.png /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/icon.png0#
+
+CCpResource build/Release-iphoneos/PathTimes.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+s318908273.288951
+e318908273.340348
+r1
+xCpResource
+xbuild/Release-iphoneos/PathTimes.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist318908273#318908273#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist8606327392#517"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app0#
+
+CCreateUniversalBinary /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes normal "armv6 armv7"
+s318908282.369763
+e318908282.373731
+r1
+xCreateUniversalBinary
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes
+xnormal
+xarmv6 armv7
+lSLF07#2@89"CreateUniversalBinary build/Release-iphoneos/PathTimes.app/PathTimes normal "armv6 armv7"318908282#318908282#0(0"0(0#0#49"/Users/jimenglert/Documents/PathTimes/armv6 armv78607443264#536"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes -output /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes0#
+
+CGenerateDSYMFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app.dSYM /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes
+s318908282.373840
+e318908282.411689
+r1
+xGenerateDSYMFile
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app.dSYM
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes
+lSLF07#2@105"GenerateDSYMFile build/Release-iphoneos/PathTimes.app.dSYM build/Release-iphoneos/PathTimes.app/PathTimes318908282#318908282#0(0"0(0#0#84"/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes8605987296#369"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PathTimes -o /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app.dSYM0#
+
+CLd /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes normal armv6
+s318908281.085374
+e318908281.164520
+r1
+xLd
+x/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes
+xnormal
+xarmv6
+lSLF07#2@128"Link /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes318908281#318908281#0(0"0(0#0#0"8608312512#874"    cd /Users/jimenglert/Documents/PathTimes    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -filelist /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv6/PathTimes0#
+
+CLd /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes normal armv7
+s318908282.314599
+e318908282.369646
+r1
+xLd
+x/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes
+xnormal
+xarmv7
+lSLF07#2@128"Link /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes318908282#318908282#0(0"0(0#0#0"8608648192#874"    cd /Users/jimenglert/Documents/PathTimes    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -filelist /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/Objects-normal/armv7/PathTimes0#
+
+CProcessInfoPlistFile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/Info.plist PathTimes-Info.plist
+s318908273.290948
+e318908273.302754
+r1
+xProcessInfoPlistFile
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/Info.plist
+xPathTimes-Info.plist
+lSLF07#2@28"Process PathTimes-Info.plist318908273#318908273#0(0"0(0#0#58"/Users/jimenglert/Documents/PathTimes/PathTimes-Info.plist8606071904#572"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility PathTimes-Info.plist -genpkginfo /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/ResourceRules.plist -o /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/Info.plist0#
+
+CProcessPCH /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch.gch PathTimes_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s318908276.381224
+e318908277.644890
+r1
+xProcessPCH
+x/var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch.gch
+xPathTimes_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile PathTimes_Prefix.pch318908276#318908277#0(0"0(0#0#58"/Users/jimenglert/Documents/PathTimes/PathTimes_Prefix.pch8605885088#1690"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv7 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/jimenglert/Documents/PathTimes/PathTimes_Prefix.pch -o /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-esgpnigqlszsrteqlkrazmwixsoj/PathTimes_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch.gch PathTimes_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s318908276.380178
+e318908277.526122
+r1
+xProcessPCH
+x/var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch.gch
+xPathTimes_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile PathTimes_Prefix.pch318908276#318908277#0(0"0(0#0#58"/Users/jimenglert/Documents/PathTimes/PathTimes_Prefix.pch8607138912#1690"    cd /Users/jimenglert/Documents/PathTimes    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-generated-files.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-own-target-headers.hmap -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-all-target-headers.hmap -iquote /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes-project-headers.hmap -F/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos -I/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/include -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources/armv6 -I/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/DerivedSources -DNS_BLOCK_ASSERTIONS=1 -c /Users/jimenglert/Documents/PathTimes/PathTimes_Prefix.pch -o /var/folders/tY/tY-HMQoTFN0MS7IJAnTEp++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/PathTimes_Prefix-fgqmablajecwmgauotadmnierqju/PathTimes_Prefix.pch.gch0#
+
+CProcessProductPackaging "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/1872E848-8C30-424F-B6C3-9D18AF615143.mobileprovision" /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+s318827863.048041
+e318827863.049884
+r1
+xProcessProductPackaging
+x/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/1872E848-8C30-424F-B6C3-9D18AF615143.mobileprovision
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+lSLF07#2@201"ProcessProductPackaging "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/1872E848-8C30-424F-B6C3-9D18AF615143.mobileprovision" build/Release-iphoneos/PathTimes.app/embedded.mobileprovision318827863#318827863#0(0"0(0#0#99"/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision8621968032#430"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/1872E848-8C30-424F-B6C3-9D18AF615143.mobileprovision" -o /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/5735C732-CBCB-4BF5-89A4-6799F8F3A1EF.mobileprovision" /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+s318908282.411808
+e318908282.413213
+r1
+xProcessProductPackaging
+x/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/5735C732-CBCB-4BF5-89A4-6799F8F3A1EF.mobileprovision
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+lSLF07#2@201"ProcessProductPackaging "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/5735C732-CBCB-4BF5-89A4-6799F8F3A1EF.mobileprovision" build/Release-iphoneos/PathTimes.app/embedded.mobileprovision318908282#318908282#0(0"0(0#0#99"/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision8608132256#430"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/5735C732-CBCB-4BF5-89A4-6799F8F3A1EF.mobileprovision" -o /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/9C113105-691C-4CC8-9B1F-66056F2F4487.mobileprovision" /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+s318815337.785557
+e318815337.787461
+r1
+xProcessProductPackaging
+x/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/9C113105-691C-4CC8-9B1F-66056F2F4487.mobileprovision
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision
+lSLF07#2@201"ProcessProductPackaging "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/9C113105-691C-4CC8-9B1F-66056F2F4487.mobileprovision" build/Release-iphoneos/PathTimes.app/embedded.mobileprovision318815337#318815337#0(0"0(0#0#99"/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision4640491904#519"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/local/mysql/bin/:/Library/Grails/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin"    <com.apple.tools.product-pkg-utility> "/Users/jimenglert/Library/MobileDevice/Provisioning Profiles/9C113105-691C-4CC8-9B1F-66056F2F4487.mobileprovision" -o /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent
+s318908282.418445
+e318908282.441076
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+x/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent
+lSLF07#2@183"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent318908282#318908282#0(0"0(0#0#108"/Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent8598806656#438"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/jimenglert/Documents/PathTimes/build/PathTimes.build/Release-iphoneos/PathTimes.build/PathTimes.xcent0#
+
+CTouch /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+s318908282.413281
+e318908282.418342
+r1
+xTouch
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+lSLF07#2@80"Touch /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app318908282#318908282#0(0"0(0#0#0"8606001024#266"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app0#
+
+CValidate /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+s318908282.705796
+e318908282.875448
+r1
+xValidate
+x/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app
+lSLF07#2@45"Validate build/Release-iphoneos/PathTimes.app318908282#318908282#0(0"0(0#0#74"/Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app8611832864#375"    cd /Users/jimenglert/Documents/PathTimes    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PRODUCT_TYPE com.apple.product-type.application    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/Validation /Users/jimenglert/Documents/PathTimes/build/Release-iphoneos/PathTimes.app0#
+

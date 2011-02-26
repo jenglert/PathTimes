@@ -16,7 +16,7 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 	/**
 	 * Tests all the schedules for appropriateness
 	 */
-	public void testAllSchedules() {
+	public void dontrunallthetimetestAllSchedules() {
 		for (int i = 0; i < Station.values().length; i++) {
 			for (int j = 0; j < Station.values().length; j++) {
 				for (int dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
@@ -424,6 +424,7 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, 22);
 		cal.set(Calendar.MINUTE, 30);
+		cal.set(Calendar.MONTH, Calendar.FEBRUARY);
 		cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
 		cal.set(Calendar.DAY_OF_MONTH, 21);
 		cal.set(Calendar.YEAR, 2011);
@@ -443,6 +444,33 @@ public class ScheduleUtilTest extends PathTimesUnitTest {
 		assertClose(ScheduleUtil.convertDateStringToCalendar("11:45 PM"),
 				nextArrivalTimes.get(3));
 		assertClose(ScheduleUtil.convertDateStringToCalendar("12:00 AM"),
+				nextArrivalTimes.get(4));
+	}
+	
+	public void testGetNextArrivalTime_13() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.HOUR_OF_DAY, 12);
+		cal.set(Calendar.MINUTE, 00);
+		cal.set(Calendar.MONTH, Calendar.FEBRUARY);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+		cal.set(Calendar.DAY_OF_MONTH, 25);
+		cal.set(Calendar.YEAR, 2011);
+		
+		List<Calendar> nextArrivalTimes = ScheduleUtil.getNextArrivalTimes(
+				Station.Pavonia, Station.ThirtyThird, cal, 5);
+
+		assertNotNull(nextArrivalTimes);
+		assertEquals(5, nextArrivalTimes.size());
+		
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:06 PM"),
+				nextArrivalTimes.get(0));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:16 PM"),
+				nextArrivalTimes.get(1));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:26 PM"),
+				nextArrivalTimes.get(2));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:36 PM"),
+				nextArrivalTimes.get(3));
+		assertClose(ScheduleUtil.convertDateStringToCalendar("12:46 PM"),
 				nextArrivalTimes.get(4));
 	}
 }
