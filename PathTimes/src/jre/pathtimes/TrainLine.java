@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public enum TrainLine {
-			
+
 	TTRD_HOB_WEEKDAY(
 			new Station[] { Station.ThirtyThird, Station.TwentyThird,
 					Station.Fourteenth, Station.Nineth, Station.Christopher,
@@ -34,8 +34,8 @@ public enum TrainLine {
 					"09:12 PM", "09:22 PM", "09:32 PM", "09:42 PM", "09:57 PM",
 					"10:12 PM", "10:27 PM", "10:42 PM", "10:57 PM", "11:12 PM",
 					"11:27 PM"}, new int[] { 2, 1, 1,
-					2, 11 }, ScheduleDay.Weekday), 
-					
+					2, 11 }, ScheduleDay.Weekday),
+
 	TTRD_JSQ_VIA_HOB_SAT(
 			new Station[] { Station.ThirtyThird, Station.TwentyThird,
 					Station.Fourteenth, Station.Nineth, Station.Christopher,
@@ -61,8 +61,8 @@ public enum TrainLine {
 					"09:17 PM", "09:32 PM", "09:47 PM", "10:02 PM", "10:17 PM",
 					"10:32 PM", "10:47 PM", "11:02 PM", "11:17 PM", "11:32 PM",
 					"11:47 AM", "12:00 AM" }, new int[] { 2, 1, 1, 2, 11, 3, 3,
-					4 }, ScheduleDay.Saturday), 
-					
+					4 }, ScheduleDay.Saturday),
+
 	TTRD_JSQ_VIA_HOB_SUN_HOL(
 			new Station[] { Station.ThirtyThird, Station.TwentyThird,
 					Station.Fourteenth, Station.Nineth, Station.Christopher,
@@ -87,9 +87,9 @@ public enum TrainLine {
 					"08:00 PM", "08:20 PM", "08:40 PM", "09:00 PM", "09:20 PM",
 					"09:40 PM", "10:00 PM", "10:20 PM", "10:40 PM", "11:00 PM",
 					"11:20 PM", "11:45 PM" }, new int[] { 2, 1, 1,
-					2, 11, 3, 3, 4 }, ScheduleDay.SundayHoliday), 
-					
-					
+					2, 11, 3, 3, 4 }, ScheduleDay.SundayHoliday),
+
+
 	TTRD_JSQ_VIA_HOB_WEEKDAY(
 			new Station[] { Station.ThirtyThird, Station.TwentyThird,
 					Station.Fourteenth, Station.Nineth, Station.Christopher,
@@ -98,9 +98,9 @@ public enum TrainLine {
 					"12:15 AM", "12:30 AM", "12:45 AM", "01:20 AM", "01:55 AM",
 					"02:30 AM", "03:05 AM", "03:40 AM", "04:15 AM", "04:50 AM",
 					"05:25 AM", "06:00 AM", "06:15 AM",  "11:45 PM"}, new int[] { 2, 1, 1,
-					2, 11, 3, 3, 4 }, ScheduleDay.Weekday), 
-					
-					
+					2, 11, 3, 3, 4 }, ScheduleDay.Weekday),
+
+
 	TTRD_JSQ_WEEKDAY(
 			new Station[] { Station.ThirtyThird, Station.TwentyThird,
 					Station.Fourteenth, Station.Nineth, Station.Christopher,
@@ -131,8 +131,8 @@ public enum TrainLine {
 					"08:27 PM", "08:37 PM", "08:47 PM", "08:57 PM", "09:07 PM",
 					"09:17 PM", "09:27 PM", "09:37 PM", "09:52 PM", "10:07 PM",
 					"10:22 PM", "10:37 PM", "10:52 PM", "11:07 PM", "11:22 PM",
-					"11:37 PM" }, new int[] { 2, 1, 1, 2, 11, 3, 4 }, ScheduleDay.Weekday), 
-			
+					"11:37 PM" }, new int[] { 2, 1, 1, 2, 11, 3, 4 }, ScheduleDay.Weekday),
+
 	HOB_TTRD_WEEKDAY(
 			new Station[] { Station.Hoboken, Station.Christopher,
 					Station.Nineth, Station.Fourteenth, Station.TwentyThird,
@@ -161,8 +161,8 @@ public enum TrainLine {
 					"08:32 PM", "08:42 PM", "08:52 PM", "09:02 PM", "09:12 PM",
 					"09:22 PM", "09:37 PM", "09:52 PM", "10:07 PM", "10:22 PM",
 					"10:37 PM", "10:52 PM", "11:07 PM" }, new int[] { 8, 2, 1, 1, 2 },
-			ScheduleDay.Weekday), 
-			
+			ScheduleDay.Weekday),
+
 	HOB_WTC_WEEKDAY(new Station[] {
 			Station.Hoboken, Station.Pavonia, Station.ExchangePlace,
 			Station.WTC }, new String[] { "06:14 AM", "06:24 AM", "06:34 AM",
@@ -187,8 +187,8 @@ public enum TrainLine {
 			"08:33 PM", "08:45 PM", "08:57 PM", "09:09 PM", "09:21 PM",
 			"09:33 PM", "09:45 PM", "09:57 PM", "10:11 PM", "10:26 PM",
 			"10:41 PM", "10:56 PM", "11:11 PM", "11:26 PM" }, new int[] { 3, 3,
-			4 }, ScheduleDay.Weekday), 
-			
+			4 }, ScheduleDay.Weekday),
+
 	JSQ_TTRD_VIA_HOB_SAT(new Station[] {
 			Station.JournalSquare, Station.GroveSt, Station.Pavonia,
 			Station.Hoboken, Station.Christopher, Station.Nineth,
@@ -214,7 +214,7 @@ public enum TrainLine {
 					"10:15 PM", "10:30 PM", "10:45 PM", "11:00 PM", "11:15 PM",
 					"11:30 PM", "11:45 PM", "12:00 AM" }, new int[] { 4, 3, 6,
 					8, 2, 1, 1, 2 }, ScheduleDay.Saturday),
-					
+
 		JSQ_TTRD_VIA_HOB_SUN_HOL(
 			new Station[] { Station.JournalSquare, Station.GroveSt,
 					Station.Pavonia, Station.Hoboken, Station.Christopher,
@@ -240,12 +240,12 @@ public enum TrainLine {
 					"09:50 PM", "10:10 PM", "10:30 PM", "10:50 PM", "11:15 PM",
 					"11:45 PM", "12:00 AM" }, new int[] { 4, 3, 6, 8, 2, 1,
 					1, 2 }, ScheduleDay.SundayHoliday),
-					
+
 	JSQ_TTRD_WEEKDAY(
 			new Station[] { Station.JournalSquare, Station.GroveSt,
 					Station.Pavonia, Station.Christopher,
 					Station.Nineth, Station.Fourteenth, Station.TwentyThird,
-					Station.ThirtyThird }, new String[] { 
+					Station.ThirtyThird }, new String[] {
 					"05:59 AM", "06:09 AM", "06:19 AM", "06:29 AM", "06:39 AM",
 					"06:49 AM", "06:59 AM", "07:09 AM", "07:14 AM", "07:19 AM",
 					"07:24 AM", "07:29 AM", "07:34 AM", "07:39 AM", "07:44 AM",
@@ -271,9 +271,9 @@ public enum TrainLine {
 					"07:29 PM", "07:39 PM", "07:49 PM", "07:59 PM", "08:09 PM",
 					"08:19 PM", "08:29 PM", "08:39 PM", "08:49 PM", "08:59 PM",
 					"09:09 PM", "09:24 PM", "09:39 PM", "09:54 PM", "10:09 PM",
-					"10:24 PM", "10:39 PM", "10:54 PM", "11:09 PM"}, 
-					new int[] { 4, 3, 9, 2, 1, 1, 2 }, ScheduleDay.Weekday), 
-					
+					"10:24 PM", "10:39 PM", "10:54 PM", "11:09 PM"},
+					new int[] { 4, 3, 9, 2, 1, 1, 2 }, ScheduleDay.Weekday),
+
 		JSQ_TTRD_VIA_HOB_WEEKDAY(
 				new Station[] { Station.JournalSquare, Station.GroveSt,
 						Station.Pavonia, Station.Hoboken, Station.Christopher,
@@ -281,10 +281,10 @@ public enum TrainLine {
 						Station.ThirtyThird }, new String[] { "12:00 AM", "12:15 AM",
 						"12:45 AM", "01:20 AM", "01:55 AM", "02:30 AM", "03:05 AM",
 						"03:40 AM", "04:15 AM", "04:50 AM", "05:25 AM", "05:40 AM",
-						 "11:15 PM", "11:30 PM", "11:45 PM"}, 
-						 new int[] { 4, 3, 6, 8, 2, 1, 1, 2 }, ScheduleDay.Weekday), 
-					
-					
+						 "11:15 PM", "11:30 PM", "11:45 PM"},
+						 new int[] { 4, 3, 6, 8, 2, 1, 1, 2 }, ScheduleDay.Weekday),
+
+
 	NWK_WTC_SAT(
 			new Station[] { Station.Newark, Station.Harrison,
 					Station.JournalSquare, Station.GroveSt,
@@ -306,9 +306,9 @@ public enum TrainLine {
 					"09:15 PM", "09:30 PM", "09:45 PM", "10:00 PM", "10:15 PM",
 					"10:30 PM", "10:45 PM", "11:00 PM", "11:15 PM", "11:30 PM",
 					"12:00 AM" }, new int[] { 2, 9, 4, 3, 4 },
-			ScheduleDay.Saturday), 
-			
-			
+			ScheduleDay.Saturday),
+
+
 	NWK_WTC_SUN_HOL(new Station[] {
 			Station.Newark, Station.Harrison, Station.JournalSquare,
 			Station.GroveSt, Station.ExchangePlace, Station.WTC },
@@ -327,9 +327,9 @@ public enum TrainLine {
 					"08:15 PM", "08:35 PM", "08:55 PM", "09:15 PM", "09:35 PM",
 					"09:55 PM", "10:15 PM", "10:35 PM", "10:55 PM", "11:15 PM",
 					"11:35 PM", "12:00 AM" }, new int[] { 2, 9, 4, 3, 4 },
-			ScheduleDay.SundayHoliday), 
-			
-	
+			ScheduleDay.SundayHoliday),
+
+
 	NWK_WTC_WEEKDAY(new Station[] {
 			Station.Newark, Station.Harrison, Station.JournalSquare,
 			Station.GroveSt, Station.ExchangePlace, Station.WTC },
@@ -360,12 +360,12 @@ public enum TrainLine {
 					"06:46 PM", "06:56 PM", "07:06 PM", "07:16 PM", "07:26 PM",
 					"07:36 PM", "07:46 PM", "07:56 PM", "08:06 PM", "08:16 PM",
 					"08:26 PM", "08:36 PM", "08:46 PM", "08:56 PM", "09:06 PM",
-					"09:16 PM", "09:26 PM", "09:41 PM", "09:56 PM", "10:11 PM",
-					"10:26 PM", "10:41 PM", "10:56 PM", "11:11 PM", "11:30 PM",
+					"09:16 PM", "09:26 PM", "09:41 PM", "09:56 PM", "10:08 PM",
+					"10:23 PM", "10:38 PM", "10:53 PM", "11:08 PM", "11:25 PM",
 					"12:00 AM" }, new int[] { 2, 9, 4, 3, 4 },
-			ScheduleDay.Weekday), 
-			
-			
+			ScheduleDay.Weekday),
+
+
 	WTC_HOB_WEEKDAY(new Station[] { Station.WTC,
 			Station.ExchangePlace, Station.Pavonia, Station.Hoboken },
 			new String[] { "05:58 AM", "06:08 AM", "06:18 AM", "06:28 AM",
@@ -390,9 +390,9 @@ public enum TrainLine {
 					"08:27 PM", "08:39 PM", "08:51 PM", "09:03 PM", "09:15 PM",
 					"09:27 PM", "09:41 PM", "09:56 PM", "10:11 PM", "10:26 PM",
 					"10:41 PM", "10:56 PM", "11:11 PM" },
-			new int[] { 4, 3, 3 }, ScheduleDay.Weekday), 
-			
-	
+			new int[] { 4, 3, 3 }, ScheduleDay.Weekday),
+
+
 	WTC_NWK_SAT(
 			new Station[] { Station.WTC, Station.ExchangePlace,
 					Station.GroveSt, Station.JournalSquare, Station.Harrison,
@@ -413,9 +413,9 @@ public enum TrainLine {
 					"08:57 PM", "09:12 PM", "09:27 PM", "09:42 PM", "09:57 PM",
 					"10:12 PM", "10:27 PM", "10:42 PM", "10:57 PM", "11:12 PM",
 					"11:27 PM", "11:42 PM", "12:00 AM" }, new int[] { 2, 9, 4,
-					3, 4 }, ScheduleDay.Saturday), 
-					
-					
+					3, 4 }, ScheduleDay.Saturday),
+
+
 	WTC_NWK_SUN_HOL(
 			new Station[] { Station.WTC, Station.ExchangePlace,
 					Station.GroveSt, Station.JournalSquare, Station.Harrison,
@@ -434,9 +434,9 @@ public enum TrainLine {
 					"07:42 PM", "08:02 PM", "08:22 PM", "08:42 PM", "09:02 PM",
 					"09:22 PM", "09:42 PM", "10:02 PM", "10:22 PM", "10:42 PM",
 					"11:02 PM", "11:22 PM", "11:42 PM", "12:00 AM" },
-			new int[] { 2, 9, 4, 3, 4 }, ScheduleDay.SundayHoliday), 
-			
-			
+			new int[] { 2, 9, 4, 3, 4 }, ScheduleDay.SundayHoliday),
+
+
 	WTC_NWK_WEEKDAY(
 			new Station[] { Station.WTC, Station.ExchangePlace,
 					Station.GroveSt, Station.JournalSquare, Station.Harrison,
@@ -486,70 +486,70 @@ public enum TrainLine {
 	 * The times that the train is leaving.
 	 */
 	private String[] timeTable;
-	
+
 	/**
 	 * A list of station stops that the train will stop at.
 	 */
 	private Station[] stations;
-	
+
 	/**
 	 * The time it takes to go from one station to the next
 	 */
 	private int[] travelTimes;
-	
+
 	/**
 	 * The day the schedule applies to
 	 */
 	private ScheduleDay scheduleDay;
-	
+
 	public List<Calendar> findNextAppropriateArrivalTimes(Station station, Calendar currentTime, Integer desiredNumberOfResults) {
 		List<Calendar> arrivalTimes = new ArrayList<Calendar>();
-		
+
 		for (String startTimeStr : getTimeTable()) {
 			Calendar travelTime = ScheduleUtil.convertDateStringToCalendar(startTimeStr);
 			travelTime.set(Calendar.DAY_OF_YEAR, currentTime.get(Calendar.DAY_OF_YEAR));
-			
+
 			// Add time to the travel start time if the start station isn't the first station on the journey.
 			Integer trainLineStartDifference = getTimeBetweenStations(getStations()[0], station);
 			travelTime.add(Calendar.MINUTE, trainLineStartDifference);
-			
+
 			if (ScheduleUtil.compare(travelTime, currentTime) >= 0) {
 				arrivalTimes.add(travelTime);
-					
+
 					if (arrivalTimes.size() >= desiredNumberOfResults) {
 						return arrivalTimes;
 					}
 			}
 		}
-		
+
 		return arrivalTimes;
 	}
-	
+
 	/**
 	 * Determines the duration of travel between the start station and the end station on the train line.
 	 */
 	public Integer getTimeBetweenStations(Station startStation, Station endStation) {
-		
+
 		if (startStation.equals(endStation)) {
 			return 0;
 		}
-		
+
 		Integer travelTime = 0;
 		boolean startFound = false;
 		for (int i = 0; i < stations.length; i++) {
 			if (startFound) {
 				travelTime += Integer.valueOf(travelTimes[i - 1]);
 			}
-			
+
 			if (stations[i].equals(startStation)) {
 				startFound = true;
 			}
-			
+
 			if (startFound && stations[i].equals(endStation)) {
 				return travelTime;
 			}
 		}
-		
+
 		return null;
 	}
 
