@@ -304,8 +304,8 @@ public enum TrainLine {
 					"06:45 PM", "07:00 PM", "07:15 PM", "07:30 PM", "07:45 PM",
 					"08:00 PM", "08:15 PM", "08:30 PM", "08:45 PM", "09:00 PM",
 					"09:15 PM", "09:30 PM", "09:45 PM", "10:00 PM", "10:15 PM",
-					"10:30 PM", "10:45 PM", "11:00 PM", "11:15 PM", "11:30 PM",
-					"12:00 AM" }, new int[] { 2, 9, 4, 3, 4 },
+					"10:30 PM", "10:45 PM", "11:00 PM", "11:15 PM", "11:30 PM"
+					}, new int[] { 2, 9, 4, 3, 4 },
 			ScheduleDay.Saturday),
 
 
@@ -326,7 +326,7 @@ public enum TrainLine {
 					"06:45 PM", "07:00 PM", "07:15 PM", "07:35 PM", "07:55 PM",
 					"08:15 PM", "08:35 PM", "08:55 PM", "09:15 PM", "09:35 PM",
 					"09:55 PM", "10:15 PM", "10:35 PM", "10:55 PM", "11:15 PM",
-					"11:35 PM", "12:00 AM" }, new int[] { 2, 9, 4, 3, 4 },
+					"11:35 PM" }, new int[] { 2, 9, 4, 3, 4 },
 			ScheduleDay.SundayHoliday),
 
 
@@ -361,8 +361,8 @@ public enum TrainLine {
 					"07:36 PM", "07:46 PM", "07:56 PM", "08:06 PM", "08:16 PM",
 					"08:26 PM", "08:36 PM", "08:46 PM", "08:56 PM", "09:06 PM",
 					"09:16 PM", "09:26 PM", "09:41 PM", "09:56 PM", "10:08 PM",
-					"10:23 PM", "10:38 PM", "10:53 PM", "11:08 PM", "11:25 PM",
-					"12:00 AM" }, new int[] { 2, 9, 4, 3, 4 },
+					"10:23 PM", "10:38 PM", "10:53 PM", "11:08 PM", "11:25 PM"
+					}, new int[] { 2, 9, 4, 3, 4 },
 			ScheduleDay.Weekday),
 
 
@@ -412,8 +412,7 @@ public enum TrainLine {
 					"07:42 PM", "07:57 PM", "08:12 PM", "08:27 PM", "08:42 PM",
 					"08:57 PM", "09:12 PM", "09:27 PM", "09:42 PM", "09:57 PM",
 					"10:12 PM", "10:27 PM", "10:42 PM", "10:57 PM", "11:12 PM",
-					"11:27 PM", "11:42 PM", "12:00 AM" }, new int[] { 2, 9, 4,
-					3, 4 }, ScheduleDay.Saturday),
+					"11:27 PM", "11:42 PM" }, new int[] { 4, 3, 4, 9, 2 }, ScheduleDay.Saturday),
 
 
 	WTC_NWK_SUN_HOL(
@@ -433,8 +432,8 @@ public enum TrainLine {
 					"06:27 PM", "06:42 PM", "06:57 PM", "07:12 PM", "07:27 PM",
 					"07:42 PM", "08:02 PM", "08:22 PM", "08:42 PM", "09:02 PM",
 					"09:22 PM", "09:42 PM", "10:02 PM", "10:22 PM", "10:42 PM",
-					"11:02 PM", "11:22 PM", "11:42 PM", "12:00 AM" },
-			new int[] { 2, 9, 4, 3, 4 }, ScheduleDay.SundayHoliday),
+					"11:02 PM", "11:22 PM", "11:42 PM" },
+			new int[] { 4, 3, 4, 9, 2 }, ScheduleDay.SundayHoliday),
 
 
 	WTC_NWK_WEEKDAY(
